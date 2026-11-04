@@ -1,0 +1,36 @@
+﻿Ano;Rank_Geral;Rank_Componente;Questao;Componente;Gabarito_Oficial;Taxa_Acerto_%;Taxa_Erro_%;Acertos;Erros;Em_Branco;Anulados;Total_Alunos;Status
+2008;1;1;FG_05;Formação Geral;D;95.29;4.71;81;4;0;0;85;Válida
+2008;2;2;FG_02;Formação Geral;E;90.59;9.41;77;8;0;0;85;Válida
+2008;3;1;CE_01;Componente Específico;C;76.47;23.53;65;20;0;0;85;Válida
+2008;4;3;FG_08;Formação Geral;C;75.29;24.71;64;21;0;0;85;Válida
+2008;5;2;CE_17;Componente Específico;D;70.59;29.41;60;25;0;0;85;Válida
+2008;6;4;FG_04;Formação Geral;A;65.88;34.12;56;29;0;0;85;Válida
+2008;7;3;CE_08;Componente Específico;C;61.18;38.82;52;33;0;0;85;Válida
+2008;7;5;FG_06;Formação Geral;B;61.18;38.82;52;33;0;0;85;Válida
+2008;9;4;CE_05;Componente Específico;B;60.00;40.00;51;34;0;0;85;Válida
+2008;9;4;CE_09;Componente Específico;A;60.00;40.00;51;34;0;0;85;Válida
+2008;9;4;CE_11;Componente Específico;D;60.00;40.00;51;34;0;0;85;Válida
+2008;12;6;FG_07;Formação Geral;D;57.65;42.35;49;36;0;0;85;Válida
+2008;13;7;FG_03;Formação Geral;D;52.94;47.06;45;40;0;0;85;Válida
+2008;14;7;CE_07;Componente Específico;D;49.41;50.59;42;43;0;0;85;Válida
+2008;15;8;CE_15;Componente Específico;E;44.71;55.29;38;47;0;0;85;Válida
+2008;16;9;CE_22;Componente Específico;C;43.53;56.47;37;48;0;0;85;Válida
+2008;16;9;CE_27;Componente Específico;C;43.53;56.47;37;48;0;0;85;Válida
+2008;18;11;CE_16;Componente Específico;B;42.35;57.65;36;49;0;0;85;Válida
+2008;19;12;CE_03;Componente Específico;A;41.18;58.82;35;50;0;0;85;Válida
+2008;20;13;CE_04;Componente Específico;E;38.82;61.18;33;52;0;0;85;Válida
+2008;21;8;FG_01;Formação Geral;C;36.47;63.53;31;54;0;0;85;Válida
+2008;22;14;CE_20;Componente Específico;D;35.29;64.71;30;55;0;0;85;Válida
+2008;23;15;CE_06;Componente Específico;B;30.59;69.41;26;59;0;0;85;Válida
+2008;23;15;CE_10;Componente Específico; ;30.59;69.41;26;59;0;0;85;Válida
+2008;23;15;CE_24;Componente Específico;A;30.59;69.41;26;59;0;0;85;Válida
+2008;23;15;CE_25;Componente Específico;B;30.59;69.41;26;59;0;0;85;Válida
+2008;27;19;CE_23;Componente Específico;C;28.24;71.76;24;61;0;0;85;Válida
+2008;28;20;CE_21;Componente Específico;B;25.88;74.12;22;63;0;0;85;Válida
+2008;29;21;CE_18;Componente Específico;A;23.53;76.47;20;65;0;0;85;Válida
+2008;30;22;CE_02;Componente Específico;C;22.35;77.65;19;66;0;0;85;Válida
+2008;30;22;CE_26;Componente Específico;A;22.35;77.65;19;66;0;0;85;Válida
+2008;32;24;CE_13;Componente Específico;E;21.18;78.82;18;67;0;0;85;Válida
+2008;32;24;CE_19;Componente Específico;D;21.18;78.82;18;67;0;0;85;Válida
+2008;34;26;CE_12;Componente Específico;A;18.82;81.18;16;69;0;0;85;Válida
+2008;35;27;CE_14;Componente Específico;E;12.94;87.06;11;74;0;0;85;Válida

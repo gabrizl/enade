@@ -10,10 +10,12 @@ plt.rcParams['font.sans-serif'] = 'Arial'
 plt.rcParams['font.family'] = 'sans-serif'
 plt.rcParams['figure.dpi'] = 300
 
-PASTA_GRAFICOS = "graficos_analise"
+PASTA_GRAFICOS = "graficos"
+PASTA_RELATORIOS = "relatorios_csv"
 ARQUIVO_CSV = "microdados_tratados/ufcg_cc_respostas_questoes_todos_anos.csv"
 
 os.makedirs(PASTA_GRAFICOS, exist_ok=True)
+os.makedirs(PASTA_RELATORIOS, exist_ok=True)
 
 def carregar_dados():
     print(f"Carregando dados de: {ARQUIVO_CSV}")
@@ -112,7 +114,7 @@ def analisar_questoes_por_ano(df_presentes):
             })
 
     df_resumo = pd.DataFrame(resumo_questoes)
-    df_resumo.to_csv(os.path.join(PASTA_GRAFICOS, "tabela_resumo_desempenho_questoes.csv"), index=False, sep=';', encoding='utf-8-sig')
+    df_resumo.to_csv(os.path.join(PASTA_RELATORIOS, "tabela_resumo_desempenho_questoes.csv"), index=False, sep=';', encoding='utf-8-sig')
     return df_resumo
 
 

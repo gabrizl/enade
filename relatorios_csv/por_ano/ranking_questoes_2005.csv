@@ -1,0 +1,36 @@
+﻿Ano;Rank_Geral;Rank_Componente;Questao;Componente;Gabarito_Oficial;Taxa_Acerto_%;Taxa_Erro_%;Acertos;Erros;Em_Branco;Anulados;Total_Alunos;Status
+2005;1;1;FG_04;Formação Geral;A;97.01;2.99;65;2;0;0;67;Válida
+2005;2;2;FG_01;Formação Geral;D;91.04;8.96;61;6;0;0;67;Válida
+2005;3;3;FG_02;Formação Geral;E;89.55;10.45;60;7;0;0;67;Válida
+2005;4;4;FG_03;Formação Geral;C;86.57;13.43;58;9;0;0;67;Válida
+2005;5;5;FG_07;Formação Geral;B;80.60;19.40;54;13;0;0;67;Válida
+2005;6;6;FG_05;Formação Geral;E;73.13;26.87;49;18;0;0;67;Válida
+2005;7;1;CE_26;Componente Específico;B;68.66;31.34;46;21;0;0;67;Válida
+2005;8;7;FG_06;Formação Geral;C;62.69;37.31;42;25;0;0;67;Válida
+2005;9;2;CE_07;Componente Específico;E;58.21;41.79;39;28;0;0;67;Válida
+2005;10;3;CE_05;Componente Específico;C;53.73;46.27;36;31;0;0;67;Válida
+2005;11;4;CE_03;Componente Específico;E;52.24;47.76;35;32;0;0;67;Válida
+2005;12;5;CE_18;Componente Específico;B;50.75;49.25;34;33;0;0;67;Válida
+2005;13;6;CE_04;Componente Específico;B;47.76;52.24;32;35;0;0;67;Válida
+2005;14;7;CE_20;Componente Específico;C;46.27;53.73;31;36;0;0;67;Válida
+2005;15;8;CE_09;Componente Específico;A;43.28;56.72;29;38;0;0;67;Válida
+2005;16;9;CE_27;Componente Específico;D;38.81;61.19;26;41;0;0;67;Válida
+2005;17;10;CE_21;Componente Específico;A;37.31;62.69;25;42;0;0;67;Válida
+2005;17;10;CE_24;Componente Específico;E;37.31;62.69;25;42;0;0;67;Válida
+2005;19;12;CE_19;Componente Específico;B;35.82;64.18;24;43;0;0;67;Válida
+2005;20;13;CE_12;Componente Específico;C;34.33;65.67;23;44;0;0;67;Válida
+2005;21;14;CE_11;Componente Específico;D;32.84;67.16;22;45;0;0;67;Válida
+2005;21;14;CE_14;Componente Específico;A;32.84;67.16;22;45;0;0;67;Válida
+2005;21;14;CE_17;Componente Específico;B;32.84;67.16;22;45;0;0;67;Válida
+2005;21;14;CE_22;Componente Específico;B;32.84;67.16;22;45;0;0;67;Válida
+2005;25;18;CE_02;Componente Específico;C;25.37;74.63;17;50;0;0;67;Válida
+2005;25;18;CE_08;Componente Específico;B;25.37;74.63;17;50;0;0;67;Válida
+2005;25;18;CE_10;Componente Específico;C;25.37;74.63;17;50;0;0;67;Válida
+2005;28;21;CE_13;Componente Específico;A;19.40;80.60;13;54;0;0;67;Válida
+2005;29;22;CE_06;Componente Específico;D;14.93;85.07;10;57;0;0;67;Válida
+2005;-;-;CE_01;Componente Específico;Z;;;0;0;0;67;67;Anulada / Desconsiderada
+2005;-;-;CE_15;Componente Específico;B;;;0;0;0;67;67;Anulada / Desconsiderada
+2005;-;-;CE_16;Componente Específico;Z;;;0;0;0;67;67;Anulada / Desconsiderada
+2005;-;-;CE_23;Componente Específico;D;;;0;0;0;67;67;Anulada / Desconsiderada
+2005;-;-;CE_25;Componente Específico;D;;;0;0;0;67;67;Anulada / Desconsiderada
+2005;-;-;CE_28;Componente Específico;C;;;0;0;0;67;67;Anulada / Desconsiderada

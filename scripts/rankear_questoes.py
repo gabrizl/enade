@@ -4,9 +4,12 @@ import os
 import statistics
 from collections import defaultdict
 
-ARQUIVO_ENTRADA = "graficos_analise/tabela_resumo_desempenho_questoes.csv"
-ARQUIVO_RANKING = "microdados_tratados/ranking_questoes_por_ano.csv"
-ARQUIVO_ESTATISTICAS = "microdados_tratados/estatisticas_anuais_desempenho.csv"
+PASTA_RELATORIOS = "relatorios_csv"
+PASTA_POR_ANO = os.path.join(PASTA_RELATORIOS, "por_ano")
+
+ARQUIVO_ENTRADA = os.path.join(PASTA_RELATORIOS, "tabela_resumo_desempenho_questoes.csv")
+ARQUIVO_RANKING = os.path.join(PASTA_RELATORIOS, "ranking_questoes_por_ano.csv")
+ARQUIVO_ESTATISTICAS = os.path.join(PASTA_RELATORIOS, "estatisticas_anuais_desempenho.csv")
 
 # Gabaritos Oficiais por Ano
 GABARITOS = {
@@ -19,9 +22,15 @@ GABARITOS = {
 }
 
 def carregar_dados():
-    if not os.path.exists(ARQUIVO_ENTRADA):
-        raise FileNotFoundError(f"Arquivo não encontrado: {ARQUIVO_ENTRADA}")
-    with open(ARQUIVO_ENTRADA, 'r', encoding='utf-8-sig') as f:
+    caminho = ARQUIVO_ENTRADA
+    # Fallback se arquivo ainda estiver no local antigo
+    if not os.path.exists(caminho):
+        caminho_legado = "graficos_analise/tabela_resumo_desempenho_questoes.csv"
+        if os.path.exists(caminho_legado):
+            caminho = caminho_legado
+        else:
+            raise FileNotFoundError(f"Arquivo de dados não encontrado: {ARQUIVO_ENTRADA}")
+    with open(caminho, 'r', encoding='utf-8-sig') as f:
         return list(csv.DictReader(f, delimiter=';'))
 
 def processar_ranking(linhas):
@@ -83,7 +92,6 @@ def processar_ranking(linhas):
         validas = [it for it in itens if it['Status'] == 'Válida']
         invalidas = [it for it in itens if it['Status'] != 'Válida']
         
-        # Ordenar válidas decrescente por taxa de acerto
         validas.sort(key=lambda x: (-x['Taxa_Acerto_%'], x['Questao']))
         
         # Rank Geral
@@ -96,7 +104,7 @@ def processar_ranking(linhas):
         for it in invalidas:
             it['Rank_Geral'] = '-'
             
-        # Rank no Componente (FG e CE separadamente)
+        # Rank Componente
         for comp in ['FG', 'CE']:
             validas_comp = [it for it in validas if it['Tipo_Curto'] == comp]
             validas_comp.sort(key=lambda x: (-x['Taxa_Acerto_%'], x['Questao']))
@@ -141,7 +149,6 @@ def gerar_estatisticas_anuais(dados_ranqueados):
         media_fg_acerto = statistics.mean(taxas_fg) if taxas_fg else 0
         media_ce_acerto = statistics.mean(taxas_ce) if taxas_ce else 0
         
-        # Extremos
         top_geral = validas[0] if validas else None
         bot_geral = validas[-1] if validas else None
         
@@ -207,7 +214,15 @@ def salvar_csv_ranking(dados, caminho_saida=ARQUIVO_RANKING):
                 'Status': r['Status']
             }
             writer.writerow(linha)
-    print(f"[OK] Arquivo de Ranking salvo em: {caminho_saida}")
+    print(f"[OK] Arquivo consolidado de Ranking salvo em: {caminho_saida}")
+
+def salvar_rankings_por_ano(dados, pasta_saida=PASTA_POR_ANO):
+    os.makedirs(pasta_saida, exist_ok=True)
+    anos = sorted(set(r['Ano'] for r in dados))
+    for ano in anos:
+        itens_ano = [r for r in dados if r['Ano'] == ano]
+        caminho_ano = os.path.join(pasta_saida, f"ranking_questoes_{ano}.csv")
+        salvar_csv_ranking(itens_ano, caminho_ano)
 
 def salvar_csv_estatisticas(estatisticas, caminho_saida=ARQUIVO_ESTATISTICAS):
     os.makedirs(os.path.dirname(caminho_saida), exist_ok=True)
@@ -255,6 +270,7 @@ if __name__ == '__main__':
     estatisticas_anuais = gerar_estatisticas_anuais(dados_ranqueados)
     
     salvar_csv_ranking(dados_ranqueados)
+    salvar_rankings_por_ano(dados_ranqueados)
     salvar_csv_estatisticas(estatisticas_anuais)
 
     if args.tabela or args.ano or args.tipo:

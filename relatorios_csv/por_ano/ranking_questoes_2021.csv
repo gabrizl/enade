@@ -1,0 +1,36 @@
+﻿Ano;Rank_Geral;Rank_Componente;Questao;Componente;Gabarito_Oficial;Taxa_Acerto_%;Taxa_Erro_%;Acertos;Erros;Em_Branco;Anulados;Total_Alunos;Status
+2021;1;1;CE_03;Componente Específico;D;77.66;22.34;73;21;0;0;94;Válida
+2021;2;2;CE_08;Componente Específico;B;70.21;29.79;66;28;0;0;94;Válida
+2021;2;2;CE_27;Componente Específico;D;70.21;29.79;66;28;0;0;94;Válida
+2021;2;1;FG_03;Formação Geral;B;70.21;29.79;66;28;0;0;94;Válida
+2021;2;1;FG_07;Formação Geral;C;70.21;29.79;66;28;0;0;94;Válida
+2021;6;3;FG_06;Formação Geral;A;69.15;30.85;65;29;0;0;94;Válida
+2021;7;4;CE_12;Componente Específico;A;62.77;37.23;59;35;0;0;94;Válida
+2021;8;5;CE_07;Componente Específico;C;60.64;39.36;57;37;0;0;94;Válida
+2021;8;5;CE_19;Componente Específico;D;60.64;39.36;57;37;0;0;94;Válida
+2021;8;4;FG_01;Formação Geral;E;60.64;39.36;57;37;0;0;94;Válida
+2021;8;4;FG_05;Formação Geral;A;60.64;39.36;57;37;0;0;94;Válida
+2021;12;7;CE_15;Componente Específico;C;59.57;40.43;56;38;0;0;94;Válida
+2021;13;6;FG_04;Formação Geral;B;52.13;47.87;49;45;0;0;94;Válida
+2021;14;8;CE_02;Componente Específico;B;50.00;50.00;47;47;0;0;94;Válida
+2021;14;8;CE_14;Componente Específico;A;50.00;50.00;47;47;0;0;94;Válida
+2021;16;10;CE_22;Componente Específico;E;46.81;53.19;44;50;0;0;94;Válida
+2021;17;11;CE_10;Componente Específico;E;45.74;54.26;43;51;0;0;94;Válida
+2021;18;12;CE_11;Componente Específico;D;38.30;61.70;36;58;0;0;94;Válida
+2021;18;12;CE_16;Componente Específico;E;38.30;61.70;36;58;0;0;94;Válida
+2021;20;14;CE_20;Componente Específico;B;34.04;65.96;32;62;0;0;94;Válida
+2021;21;15;CE_01;Componente Específico;E;31.91;68.09;30;64;0;0;94;Válida
+2021;22;7;FG_02;Formação Geral;C;30.85;69.15;29;65;0;0;94;Válida
+2021;23;16;CE_06;Componente Específico;C;28.72;71.28;27;67;0;0;94;Válida
+2021;24;17;CE_26;Componente Específico;C;24.47;75.53;23;71;0;0;94;Válida
+2021;24;8;FG_08;Formação Geral;D;24.47;75.53;23;71;0;0;94;Válida
+2021;26;18;CE_23;Componente Específico;E;22.34;77.66;21;73;0;0;94;Válida
+2021;27;19;CE_18;Componente Específico;A;15.96;84.04;15;79;0;0;94;Válida
+2021;-;-;CE_04;Componente Específico;X;;;0;0;0;94;94;Anulada / Desconsiderada
+2021;-;-;CE_05;Componente Específico;X;;;0;0;0;94;94;Anulada / Desconsiderada
+2021;-;-;CE_09;Componente Específico;X;;;0;0;0;94;94;Anulada / Desconsiderada
+2021;-;-;CE_13;Componente Específico;X;;;0;0;0;94;94;Anulada / Desconsiderada
+2021;-;-;CE_17;Componente Específico;X;;;0;0;0;94;94;Anulada / Desconsiderada
+2021;-;-;CE_21;Componente Específico;Z;;;0;0;0;94;94;Anulada / Desconsiderada
+2021;-;-;CE_24;Componente Específico;X;;;0;0;0;94;94;Anulada / Desconsiderada
+2021;-;-;CE_25;Componente Específico;Z;;;0;0;0;94;94;Anulada / Desconsiderada
