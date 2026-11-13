@@ -1,36 +1,36 @@
-﻿Ano;Rank_Geral;Rank_Componente;Questao;Componente;Gabarito_Oficial;Taxa_Acerto_%;Taxa_Erro_%;Acertos;Erros;Em_Branco;Anulados;Total_Alunos;Status
-2014;1;1;CE_09;Componente Específico;A;94.64;5.36;53;3;0;0;56;Válida
-2014;1;1;FG_04;Formação Geral;B;94.64;5.36;53;3;0;0;56;Válida
-2014;3;2;CE_16;Componente Específico;C;91.07;8.93;51;5;0;0;56;Válida
-2014;4;3;CE_12;Componente Específico;E;87.50;12.50;49;7;0;0;56;Válida
-2014;5;4;CE_01;Componente Específico;B;85.71;14.29;48;8;0;0;56;Válida
-2014;5;4;CE_02;Componente Específico;A;85.71;14.29;48;8;0;0;56;Válida
-2014;5;2;FG_08;Formação Geral;D;85.71;14.29;48;8;0;0;56;Válida
-2014;8;6;CE_17;Componente Específico;D;83.93;16.07;47;9;0;0;56;Válida
-2014;8;6;CE_19;Componente Específico;B;83.93;16.07;47;9;0;0;56;Válida
-2014;8;3;FG_03;Formação Geral;E;83.93;16.07;47;9;0;0;56;Válida
-2014;11;4;FG_07;Formação Geral;E;80.36;19.64;45;11;0;0;56;Válida
-2014;12;5;FG_06;Formação Geral;C;75.00;25.00;42;14;0;0;56;Válida
-2014;13;8;CE_21;Componente Específico;C;71.43;28.57;40;16;0;0;56;Válida
-2014;14;6;FG_01;Formação Geral;A;57.14;42.86;32;24;0;0;56;Válida
-2014;15;7;FG_02;Formação Geral;C;53.57;46.43;30;26;0;0;56;Válida
-2014;16;9;CE_18;Componente Específico;C;51.79;48.21;29;27;0;0;56;Válida
-2014;17;10;CE_05;Componente Específico;B;50.00;50.00;28;28;0;0;56;Válida
-2014;18;11;CE_06;Componente Específico;B;48.21;51.79;27;29;0;0;56;Válida
-2014;18;11;CE_07;Componente Específico;C;48.21;51.79;27;29;0;0;56;Válida
-2014;18;11;CE_08;Componente Específico;C;48.21;51.79;27;29;0;0;56;Válida
-2014;18;11;CE_24;Componente Específico;A;48.21;51.79;27;29;0;0;56;Válida
-2014;22;15;CE_04;Componente Específico;D;37.50;62.50;21;35;0;0;56;Válida
-2014;23;16;CE_15;Componente Específico;D;35.71;64.29;20;36;0;0;56;Válida
-2014;23;16;CE_22;Componente Específico;A;35.71;64.29;20;36;0;0;56;Válida
-2014;25;8;FG_05;Formação Geral;D;33.93;66.07;19;37;0;0;56;Válida
-2014;26;18;CE_20;Componente Específico;A;28.57;71.43;16;40;0;0;56;Válida
-2014;27;19;CE_14;Componente Específico;E;25.00;75.00;14;42;0;0;56;Válida
-2014;28;20;CE_11;Componente Específico;A;16.07;83.93;9;47;0;0;56;Válida
-2014;28;20;CE_27;Componente Específico;E;16.07;83.93;9;47;0;0;56;Válida
-2014;-;-;CE_03;Componente Específico;X;;;0;0;0;56;56;Anulada / Desconsiderada
-2014;-;-;CE_10;Componente Específico;X;;;0;0;0;56;56;Anulada / Desconsiderada
-2014;-;-;CE_13;Componente Específico;X;;;0;0;0;56;56;Anulada / Desconsiderada
-2014;-;-;CE_23;Componente Específico;X;;;0;0;0;56;56;Anulada / Desconsiderada
-2014;-;-;CE_25;Componente Específico;X;;;0;0;0;56;56;Anulada / Desconsiderada
-2014;-;-;CE_26;Componente Específico;X;;;0;0;0;56;56;Anulada / Desconsiderada
+﻿Ano;Rank_Geral;Rank_Componente;Questao;Componente;Objetivo_de_Conhecimento;Gabarito_Oficial;Taxa_Acerto_%;Taxa_Erro_%;Dificuldade;Acertos;Erros;Em_Branco;Anulados;Total_Alunos;Status
+2014;1;1;CE_09;Componente Específico;Engenharia de Software e Interação Homem-Computador;A;94.64;5.36;Muito fácil;53;3;0;0;56;Válida
+2014;1;1;FG_04;Formação Geral;Tecnologias de informação e comunicação;B;94.64;5.36;Muito fácil;53;3;0;0;56;Válida
+2014;3;2;CE_16;Componente Específico;Banco de Dados;C;91.07;8.93;Muito fácil;51;5;0;0;56;Válida
+2014;4;3;CE_12;Componente Específico;Sistemas Operacionais e Arquitetura de Computadores;E;87.50;12.50;Muito fácil;49;7;0;0;56;Válida
+2014;5;4;CE_01;Componente Específico;Algoritmos e Estruturas de Dados;B;85.71;14.29;Muito fácil;48;8;0;0;56;Válida
+2014;5;4;CE_02;Componente Específico;Algoritmos e Estruturas de Dados;A;85.71;14.29;Muito fácil;48;8;0;0;56;Válida
+2014;5;2;FG_08;Formação Geral;Vida urbana e rural;D;85.71;14.29;Muito fácil;48;8;0;0;56;Válida
+2014;8;6;CE_17;Componente Específico;Linguagens Formais, Autômatos e Compiladores;D;83.93;16.07;Fácil;47;9;0;0;56;Válida
+2014;8;6;CE_19;Componente Específico;Lógica e Matemática Discreta;B;83.93;16.07;Fácil;47;9;0;0;56;Válida
+2014;8;3;FG_03;Formação Geral;Ecologia;E;83.93;16.07;Fácil;47;9;0;0;56;Válida
+2014;11;4;FG_07;Formação Geral;Políticas públicas (educação, habitação, saneamento, saúde, transporte, segurança, defesa e desenvolvimento sustentável);E;80.36;19.64;Fácil;45;11;0;0;56;Válida
+2014;12;5;FG_06;Formação Geral;"Sociodiversidade e multiculturalismo (violência, tolerância/intolerância, inclusão/exclusão e relações de gênero);";C;75.00;25.00;Fácil;42;14;0;0;56;Válida
+2014;13;8;CE_21;Componente Específico;Paradigmas de Linguagens de Programação;C;71.43;28.57;Fácil;40;16;0;0;56;Válida
+2014;14;6;FG_01;Formação Geral;Cultura e arte;A;57.14;42.86;Média;32;24;0;0;56;Válida
+2014;15;7;FG_02;Formação Geral;Responsabilidade social (setor público, privado e terceiro setor);C;53.57;46.43;Média;30;26;0;0;56;Válida
+2014;16;9;CE_18;Componente Específico;Lógica e Matemática Discreta;C;51.79;48.21;Média;29;27;0;0;56;Válida
+2014;17;10;CE_05;Componente Específico;Algoritmos e Estruturas de Dados;B;50.00;50.00;Média;28;28;0;0;56;Válida
+2014;18;11;CE_06;Componente Específico;Lógica e Matemática Discreta;B;48.21;51.79;Média;27;29;0;0;56;Válida
+2014;18;11;CE_07;Componente Específico;Linguagens Formais, Autômatos e Compiladores;C;48.21;51.79;Média;27;29;0;0;56;Válida
+2014;18;11;CE_08;Componente Específico;Teoria da Computabilidade e Complexidade;C;48.21;51.79;Média;27;29;0;0;56;Válida
+2014;18;11;CE_24;Componente Específico;Lógica e Matemática Discreta;A;48.21;51.79;Média;27;29;0;0;56;Válida
+2014;22;15;CE_04;Componente Específico;Teoria da Computabilidade e Complexidade;D;37.50;62.50;Difícil;21;35;0;0;56;Válida
+2014;23;16;CE_15;Componente Específico;Fundamentos e Técnicas de Programação;D;35.71;64.29;Difícil;20;36;0;0;56;Válida
+2014;23;16;CE_22;Componente Específico;Teoria dos Grafos;A;35.71;64.29;Difícil;20;36;0;0;56;Válida
+2014;25;8;FG_05;Formação Geral;Avanços tecnológicos;D;33.93;66.07;Difícil;19;37;0;0;56;Válida
+2014;26;18;CE_20;Componente Específico;Teoria da Computabilidade e Complexidade;A;28.57;71.43;Difícil;16;40;0;0;56;Válida
+2014;27;19;CE_14;Componente Específico;Teoria dos Grafos;E;25.00;75.00;Difícil;14;42;0;0;56;Válida
+2014;28;20;CE_11;Componente Específico;Computação Gráfica e Processamento de Imagem;A;16.07;83.93;Difícil;9;47;0;0;56;Válida
+2014;28;20;CE_27;Componente Específico;Sistemas Digitais;E;16.07;83.93;Difícil;9;47;0;0;56;Válida
+2014;-;-;CE_03;Componente Específico;Sistemas Operacionais e Arquitetura de Computadores;X;;;-;0;0;0;56;56;Anulada / Desconsiderada
+2014;-;-;CE_10;Componente Específico;Inteligência Artificial e Computacional;X;;;-;0;0;0;56;56;Anulada / Desconsiderada
+2014;-;-;CE_13;Componente Específico;Sistemas Operacionais e Arquitetura de Computadores;X;;;-;0;0;0;56;56;Anulada / Desconsiderada
+2014;-;-;CE_23;Componente Específico;Redes de Computadores e Sistemas Distribuídos;X;;;-;0;0;0;56;56;Anulada / Desconsiderada
+2014;-;-;CE_25;Componente Específico;Sistemas Operacionais e Arquitetura de Computadores;X;;;-;0;0;0;56;56;Anulada / Desconsiderada
+2014;-;-;CE_26;Componente Específico;Fundamentos e Técnicas de Programação;X;;;-;0;0;0;56;56;Anulada / Desconsiderada

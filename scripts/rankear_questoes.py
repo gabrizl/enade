@@ -8,8 +8,28 @@ PASTA_RELATORIOS = "relatorios_csv"
 PASTA_POR_ANO = os.path.join(PASTA_RELATORIOS, "por_ano")
 
 ARQUIVO_ENTRADA = os.path.join(PASTA_RELATORIOS, "tabela_resumo_desempenho_questoes.csv")
+ARQUIVO_OBJETIVOS = os.path.join(PASTA_RELATORIOS, "Enade_Objetivo_Conhecimento - Enade_Objetivo_Conhecimento.csv")
+if not os.path.exists(ARQUIVO_OBJETIVOS):
+    ARQUIVO_OBJETIVOS = "Enade_Objetivo_Conhecimento - Enade_Objetivo_Conhecimento.csv"
 ARQUIVO_RANKING = os.path.join(PASTA_RELATORIOS, "ranking_questoes_por_ano.csv")
 ARQUIVO_ESTATISTICAS = os.path.join(PASTA_RELATORIOS, "estatisticas_anuais_desempenho.csv")
+ARQUIVO_ASSUNTOS = os.path.join(PASTA_RELATORIOS, "desempenho_por_assunto.csv")
+ARQUIVO_DIFICULDADE = os.path.join(PASTA_RELATORIOS, "padrao_dificuldade_por_ano.csv")
+
+def classificar_dificuldade(acerto):
+    """Classifica o nível de dificuldade da questão com base na taxa de acerto (%)."""
+    if acerto is None:
+        return '-'
+    if acerto <= 15:
+        return "Muito difícil"
+    elif acerto <= 40:
+        return "Difícil"
+    elif acerto <= 60:
+        return "Média"
+    elif acerto <= 85:
+        return "Fácil"
+    else:
+        return "Muito fácil"
 
 # Gabaritos Oficiais por Ano
 GABARITOS = {
@@ -23,7 +43,6 @@ GABARITOS = {
 
 def carregar_dados():
     caminho = ARQUIVO_ENTRADA
-    # Fallback se arquivo ainda estiver no local antigo
     if not os.path.exists(caminho):
         caminho_legado = "graficos_analise/tabela_resumo_desempenho_questoes.csv"
         if os.path.exists(caminho_legado):
@@ -33,7 +52,25 @@ def carregar_dados():
     with open(caminho, 'r', encoding='utf-8-sig') as f:
         return list(csv.DictReader(f, delimiter=';'))
 
-def processar_ranking(linhas):
+def carregar_objetivos():
+    if not os.path.exists(ARQUIVO_OBJETIVOS):
+        print(f"[AVISO] Arquivo de objetivos não encontrado: {ARQUIVO_OBJETIVOS}")
+        return {}
+    
+    objetivos_map = {}
+    with open(ARQUIVO_OBJETIVOS, 'r', encoding='utf-8') as f:
+        reader = csv.reader(f)
+        header = next(reader)
+        for row in reader:
+            if not row or len(row) < 3:
+                continue
+            ano = row[0].strip()
+            questao = row[2].strip()
+            obj = row[4].strip() if len(row) > 4 else ''
+            objetivos_map[(ano, questao)] = obj
+    return objetivos_map
+
+def processar_ranking(linhas, objetivos_map):
     dados_por_ano = defaultdict(list)
     for row in linhas:
         ano = row['Ano']
@@ -56,6 +93,9 @@ def processar_ranking(linhas):
         em_branco = int(row['Em_Branco'])
         anulados = int(row['Anulados'])
         
+        # Objetivo de Conhecimento mapeado
+        obj_conhecimento = objetivos_map.get((ano, q), 'Não mapeado' if int(ano) < 2014 else 'Não informado')
+        
         # Identificar status da questão
         if char_gab == 'N':
             status = 'Não aplicável ao curso'
@@ -73,9 +113,11 @@ def processar_ranking(linhas):
             'Questao': q,
             'Tipo_Curto': tipo_curto,
             'Componente': 'Formação Geral' if tipo_curto == 'FG' else 'Componente Específico',
+            'Objetivo_de_Conhecimento': obj_conhecimento,
             'Gabarito_Oficial': char_gab,
             'Taxa_Acerto_%': taxa_acerto,
             'Taxa_Erro_%': taxa_erro,
+            'Dificuldade': classificar_dificuldade(taxa_acerto),
             'Acertos': acertos,
             'Erros': erros,
             'Em_Branco': em_branco,
@@ -124,6 +166,52 @@ def processar_ranking(linhas):
         
     return resultado_final
 
+def gerar_desempenho_por_assunto(dados_ranqueados):
+    """
+    Agrupa o desempenho por Objetivo de Conhecimento (assunto) em cada ano.
+    """
+    agrupado = defaultdict(list)
+    for r in dados_ranqueados:
+        if r['Status'] != 'Válida':
+            continue
+        obj = r['Objetivo_de_Conhecimento']
+        if obj in ['Não mapeado', 'Não informado', '']:
+            continue
+        chave = (r['Ano'], r['Componente'], obj)
+        agrupado[chave].append(r)
+        
+    lista_assuntos = []
+    for (ano, comp, obj), questoes in agrupado.items():
+        taxas_acerto = [q['Taxa_Acerto_%'] for q in questoes]
+        taxas_erro = [q['Taxa_Erro_%'] for q in questoes]
+        media_acerto = statistics.mean(taxas_acerto)
+        media_erro = statistics.mean(taxas_erro)
+        
+        lista_assuntos.append({
+            'Ano': ano,
+            'Componente': comp,
+            'Objetivo_de_Conhecimento': obj,
+            'Total_Questoes': len(questoes),
+            'Questoes': ", ".join(sorted(q['Questao'] for q in questoes)),
+            'Taxa_Media_Acerto_%': round(media_acerto, 2),
+            'Taxa_Media_Erro_%': round(media_erro, 2)
+        })
+        
+    # Atribuir Rank do Assunto dentro de cada ano
+    resultado = []
+    anos = sorted(set(r['Ano'] for r in lista_assuntos))
+    for ano in anos:
+        itens_ano = [r for r in lista_assuntos if r['Ano'] == ano]
+        itens_ano.sort(key=lambda x: -x['Taxa_Media_Acerto_%'])
+        for i, it in enumerate(itens_ano):
+            if i > 0 and it['Taxa_Media_Acerto_%'] == itens_ano[i - 1]['Taxa_Media_Acerto_%']:
+                it['Rank_Assunto_Ano'] = itens_ano[i - 1]['Rank_Assunto_Ano']
+            else:
+                it['Rank_Assunto_Ano'] = i + 1
+        resultado.extend(itens_ano)
+        
+    return resultado
+
 def gerar_estatisticas_anuais(dados_ranqueados):
     anos = sorted(set(r['Ano'] for r in dados_ranqueados))
     estatisticas = []
@@ -165,12 +253,12 @@ def gerar_estatisticas_anuais(dados_ranqueados):
             'Media_Geral_Erro_%': round(media_geral_erro, 2),
             'Media_FG_Acerto_%': round(media_fg_acerto, 2),
             'Media_CE_Acerto_%': round(media_ce_acerto, 2),
-            'Mais_Acertada_Geral': f"{top_geral['Questao']} ({top_geral['Taxa_Acerto_%']:.2f}%)" if top_geral else '-',
-            'Menos_Acertada_Geral': f"{bot_geral['Questao']} ({bot_geral['Taxa_Acerto_%']:.2f}%)" if bot_geral else '-',
-            'Mais_Acertada_FG': f"{fg_sorted[0]['Questao']} ({fg_sorted[0]['Taxa_Acerto_%']:.2f}%)" if fg_sorted else '-',
-            'Menos_Acertada_FG': f"{fg_sorted[-1]['Questao']} ({fg_sorted[-1]['Taxa_Acerto_%']:.2f}%)" if fg_sorted else '-',
-            'Mais_Acertada_CE': f"{ce_sorted[0]['Questao']} ({ce_sorted[0]['Taxa_Acerto_%']:.2f}%)" if ce_sorted else '-',
-            'Menos_Acertada_CE': f"{ce_sorted[-1]['Questao']} ({ce_sorted[-1]['Taxa_Acerto_%']:.2f}%)" if ce_sorted else '-'
+            'Mais_Acertada_Geral': f"{top_geral['Questao']} ({top_geral['Taxa_Acerto_%']:.2f}%) - {top_geral['Objetivo_de_Conhecimento']}" if top_geral else '-',
+            'Menos_Acertada_Geral': f"{bot_geral['Questao']} ({bot_geral['Taxa_Acerto_%']:.2f}%) - {bot_geral['Objetivo_de_Conhecimento']}" if bot_geral else '-',
+            'Mais_Acertada_FG': f"{fg_sorted[0]['Questao']} ({fg_sorted[0]['Taxa_Acerto_%']:.2f}%) - {fg_sorted[0]['Objetivo_de_Conhecimento']}" if fg_sorted else '-',
+            'Menos_Acertada_FG': f"{fg_sorted[-1]['Questao']} ({fg_sorted[-1]['Taxa_Acerto_%']:.2f}%) - {fg_sorted[-1]['Objetivo_de_Conhecimento']}" if fg_sorted else '-',
+            'Mais_Acertada_CE': f"{ce_sorted[0]['Questao']} ({ce_sorted[0]['Taxa_Acerto_%']:.2f}%) - {ce_sorted[0]['Objetivo_de_Conhecimento']}" if ce_sorted else '-',
+            'Menos_Acertada_CE': f"{ce_sorted[-1]['Questao']} ({ce_sorted[-1]['Taxa_Acerto_%']:.2f}%) - {ce_sorted[-1]['Objetivo_de_Conhecimento']}" if ce_sorted else '-'
         })
         
     return estatisticas
@@ -183,9 +271,11 @@ def salvar_csv_ranking(dados, caminho_saida=ARQUIVO_RANKING):
         'Rank_Componente',
         'Questao',
         'Componente',
+        'Objetivo_de_Conhecimento',
         'Gabarito_Oficial',
         'Taxa_Acerto_%',
         'Taxa_Erro_%',
+        'Dificuldade',
         'Acertos',
         'Erros',
         'Em_Branco',
@@ -203,9 +293,11 @@ def salvar_csv_ranking(dados, caminho_saida=ARQUIVO_RANKING):
                 'Rank_Componente': r['Rank_Componente'],
                 'Questao': r['Questao'],
                 'Componente': r['Componente'],
+                'Objetivo_de_Conhecimento': r['Objetivo_de_Conhecimento'],
                 'Gabarito_Oficial': r['Gabarito_Oficial'],
                 'Taxa_Acerto_%': f"{r['Taxa_Acerto_%']:.2f}" if r['Taxa_Acerto_%'] is not None else '',
                 'Taxa_Erro_%': f"{r['Taxa_Erro_%']:.2f}" if r['Taxa_Erro_%'] is not None else '',
+                'Dificuldade': r['Dificuldade'],
                 'Acertos': r['Acertos'],
                 'Erros': r['Erros'],
                 'Em_Branco': r['Em_Branco'],
@@ -233,6 +325,62 @@ def salvar_csv_estatisticas(estatisticas, caminho_saida=ARQUIVO_ESTATISTICAS):
         writer.writerows(estatisticas)
     print(f"[OK] Arquivo de Estatísticas Anuais salvo em: {caminho_saida}")
 
+def salvar_csv_assuntos(dados_assuntos, caminho_saida=ARQUIVO_ASSUNTOS):
+    os.makedirs(os.path.dirname(caminho_saida), exist_ok=True)
+    colunas = [
+        'Ano',
+        'Rank_Assunto_Ano',
+        'Componente',
+        'Objetivo_de_Conhecimento',
+        'Total_Questoes',
+        'Questoes',
+        'Taxa_Media_Acerto_%',
+        'Taxa_Media_Erro_%'
+    ]
+    with open(caminho_saida, 'w', newline='', encoding='utf-8-sig') as f:
+        writer = csv.DictWriter(f, fieldnames=colunas, delimiter=';')
+        writer.writeheader()
+        for r in dados_assuntos:
+            writer.writerow({
+                'Ano': r['Ano'],
+                'Rank_Assunto_Ano': r['Rank_Assunto_Ano'],
+                'Componente': r['Componente'],
+                'Objetivo_de_Conhecimento': r['Objetivo_de_Conhecimento'],
+                'Total_Questoes': r['Total_Questoes'],
+                'Questoes': r['Questoes'],
+                'Taxa_Media_Acerto_%': f"{r['Taxa_Media_Acerto_%']:.2f}",
+                'Taxa_Media_Erro_%': f"{r['Taxa_Media_Erro_%']:.2f}"
+            })
+    print(f"[OK] Arquivo de Desempenho por Assunto salvo em: {caminho_saida}")
+
+def gerar_padrao_dificuldade(dados_ranqueados):
+    """Gera o resumo da distribuição de dificuldade por ano."""
+    anos = sorted(set(r['Ano'] for r in dados_ranqueados))
+    niveis = ['Muito difícil', 'Difícil', 'Média', 'Fácil', 'Muito fácil']
+    resumo = []
+    for ano in anos:
+        validas = [r for r in dados_ranqueados if r['Ano'] == ano and r['Status'] == 'Válida']
+        total = len(validas)
+        contagem = {n: sum(1 for r in validas if r['Dificuldade'] == n) for n in niveis}
+        linha = {'Ano': ano, 'Total_Validas': total}
+        for n in niveis:
+            qtd = contagem[n]
+            pct = (qtd / total * 100) if total else 0
+            chave = n.replace(' ', '_').replace('í', 'i').replace('é', 'e').replace('á', 'a')
+            linha[f'Qtd_{chave}'] = qtd
+            linha[f'Pct_{chave}'] = round(pct, 2)
+        resumo.append(linha)
+    return resumo
+
+def salvar_csv_dificuldade(dados_dif, caminho_saida=ARQUIVO_DIFICULDADE):
+    os.makedirs(os.path.dirname(caminho_saida), exist_ok=True)
+    colunas = list(dados_dif[0].keys())
+    with open(caminho_saida, 'w', newline='', encoding='utf-8-sig') as f:
+        writer = csv.DictWriter(f, fieldnames=colunas, delimiter=';')
+        writer.writeheader()
+        writer.writerows(dados_dif)
+    print(f"[OK] Arquivo de Padrão de Dificuldade salvo em: {caminho_saida}")
+
 def exibir_tabela(dados, ano_filtro=None, comp_filtro=None, apenas_validas=False):
     anos = sorted(set(r['Ano'] for r in dados))
     if ano_filtro:
@@ -245,33 +393,38 @@ def exibir_tabela(dados, ano_filtro=None, comp_filtro=None, apenas_validas=False
         if apenas_validas:
             itens_ano = [r for r in itens_ano if r['Status'] == 'Válida']
             
-        print(f"\n{'='*82}")
+        print(f"\n{'='*115}")
         print(f" RANKING DE QUESTÕES - ENADE {ano} (UFCG - Ciência da Computação)")
-        print(f"{'='*82}")
-        print(f"{'Rank G.':<8}{'Rank C.':<8}{'Questão':<10}{'Comp.':<6}{'Acerto (%)':<14}{'Acertos/Total':<16}{'Gab.':<6}{'Status':<14}")
-        print(f"{'-'*82}")
+        print(f"{'='*115}")
+        print(f"{'Rank G.':<8}{'Rank C.':<8}{'Questão':<9}{'Comp.':<6}{'Acerto (%)':<12}{'Gab.':<5}{'Assunto / Objetivo':<45}{'Status':<14}")
+        print(f"{'-'*115}")
         for r in itens_ano:
             rg = f"{r['Rank_Geral']}º" if r['Rank_Geral'] != '-' else '-'
             rc = f"{r['Rank_Componente']}º" if r['Rank_Componente'] != '-' else '-'
             taxa = f"{r['Taxa_Acerto_%']:6.2f}%" if r['Taxa_Acerto_%'] is not None else '  -   '
-            fracao = f"{r['Acertos']}/{r['Total_Alunos']}"
-            print(f"{rg:<8}{rc:<8}{r['Questao']:<10}{r['Tipo_Curto']:<6}{taxa:<14}{fracao:<16}{r['Gabarito_Oficial']:<6}{r['Status']:<14}")
+            obj = r['Objetivo_de_Conhecimento'][:43]
+            print(f"{rg:<8}{rc:<8}{r['Questao']:<9}{r['Tipo_Curto']:<6}{taxa:<12}{r['Gabarito_Oficial']:<5}{obj:<45}{r['Status']:<14}")
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Rankear questões do Enade por taxa de acerto e gerar estatísticas.")
+    parser = argparse.ArgumentParser(description="Rankear questões do Enade por taxa de acerto e analisar assuntos.")
     parser.add_argument("--ano", type=int, help="Filtrar por ano específico (ex: 2005, 2008, 2011, 2014, 2017, 2021)")
-    parser.add_argument("--tipo", type=str, choices=['FG', 'CE'], help="Filtrar por tipo: FG (Formação Geral) ou CE (Componente Específico)")
+    parser.add_argument("--tipo", type=str, choices=['FG', 'CE'], help="Filtrar por tipo: FG ou CE")
     parser.add_argument("--apenas-validas", action="store_true", help="Exibir apenas questões válidas")
     parser.add_argument("--tabela", action="store_true", help="Exibir a tabela completa no terminal")
     args = parser.parse_args()
 
     linhas = carregar_dados()
-    dados_ranqueados = processar_ranking(linhas)
+    objetivos = carregar_objetivos()
+    dados_ranqueados = processar_ranking(linhas, objetivos)
+    dados_assuntos = gerar_desempenho_por_assunto(dados_ranqueados)
     estatisticas_anuais = gerar_estatisticas_anuais(dados_ranqueados)
+    padrao_dificuldade = gerar_padrao_dificuldade(dados_ranqueados)
     
     salvar_csv_ranking(dados_ranqueados)
     salvar_rankings_por_ano(dados_ranqueados)
     salvar_csv_estatisticas(estatisticas_anuais)
+    salvar_csv_assuntos(dados_assuntos)
+    salvar_csv_dificuldade(padrao_dificuldade)
 
     if args.tabela or args.ano or args.tipo:
         exibir_tabela(dados_ranqueados, ano_filtro=args.ano, comp_filtro=args.tipo, apenas_validas=args.apenas_validas)
