@@ -192,7 +192,7 @@ def gerar_desempenho_por_assunto(dados_ranqueados):
             'Componente': comp,
             'Objetivo_de_Conhecimento': obj,
             'Total_Questoes': len(questoes),
-            'Questoes': ", ".join(sorted(q['Questao'] for q in questoes)),
+            'Questoes': " ".join(sorted(q['Questao'] for q in questoes)),
             'Taxa_Media_Acerto_%': round(media_acerto, 2),
             'Taxa_Media_Erro_%': round(media_erro, 2)
         })
