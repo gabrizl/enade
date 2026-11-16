@@ -1,21 +1,21 @@
 ﻿Ano;Rank_Assunto_Ano;Componente;Objetivo_de_Conhecimento;Total_Questoes;Questoes;Taxa_Media_Acerto_%;Taxa_Media_Erro_%
-2014;1;Componente Específico;Engenharia de Software e Interação Homem-Computador;1;CE_09;94.64;5.36
 2014;1;Formação Geral;Tecnologias de informação e comunicação;1;FG_04;94.64;5.36
-2014;3;Componente Específico;Banco de Dados;1;CE_16;91.07;8.93
+2014;2;Componente Específico;Banco de Dados;1;CE_16;91.07;8.93
+2014;3;Componente Específico;Engenharia de Software e Interação Homem-Computador;3;CE_01 CE_02 CE_09;88.69;11.31
 2014;4;Componente Específico;Sistemas Operacionais e Arquitetura de Computadores;1;CE_12;87.50;12.50
 2014;5;Formação Geral;Vida urbana e rural;1;FG_08;85.71;14.29
 2014;6;Formação Geral;Ecologia;1;FG_03;83.93;16.07
 2014;7;Formação Geral;Políticas públicas (educação habitação saneamento saúde transporte segurança defesa e desenvolvimento sustentável);1;FG_07;80.36;19.64
 2014;8;Formação Geral;"Sociodiversidade e multiculturalismo (violência, tolerância/intolerância, inclusão/exclusão e relações de gênero);";1;FG_06;75.00;25.00
-2014;9;Componente Específico;Algoritmos e Estruturas de Dados;3;CE_01 CE_02 CE_05;73.81;26.19
-2014;10;Componente Específico;Paradigmas de Linguagens de Programação;1;CE_21;71.43;28.57
-2014;11;Componente Específico;Linguagens Formais Autômatos e Compiladores;2;CE_07 CE_17;66.07;33.93
-2014;12;Componente Específico;Lógica e Matemática Discreta;4;CE_06 CE_18 CE_19 CE_24;58.04;41.96
-2014;13;Formação Geral;Cultura e arte;1;FG_01;57.14;42.86
-2014;14;Formação Geral;Responsabilidade social (setor público privado e terceiro setor);1;FG_02;53.57;46.43
-2014;15;Componente Específico;Teoria da Computabilidade e Complexidade;3;CE_04 CE_08 CE_20;38.10;61.90
-2014;16;Componente Específico;Fundamentos e Técnicas de Programação;1;CE_15;35.71;64.29
-2014;17;Formação Geral;Avanços tecnológicos;1;FG_05;33.93;66.07
+2014;9;Componente Específico;Paradigmas de Linguagens de Programação;1;CE_21;71.43;28.57
+2014;10;Componente Específico;Linguagens Formais Autômatos e Compiladores;2;CE_07 CE_17;66.07;33.93
+2014;11;Componente Específico;Lógica e Matemática Discreta;4;CE_06 CE_18 CE_19 CE_24;58.04;41.96
+2014;12;Formação Geral;Cultura e arte;1;FG_01;57.14;42.86
+2014;13;Formação Geral;Responsabilidade social (setor público privado e terceiro setor);1;FG_02;53.57;46.43
+2014;14;Componente Específico;Algoritmos e Estruturas de Dados;2;CE_05 CE_08;49.11;50.89
+2014;15;Componente Específico;Fundamentos e Técnicas de Programação;1;CE_15;35.71;64.29
+2014;16;Formação Geral;Avanços tecnológicos;1;FG_05;33.93;66.07
+2014;17;Componente Específico;Teoria da Computabilidade e Complexidade;2;CE_04 CE_20;33.04;66.96
 2014;18;Componente Específico;Teoria dos Grafos;2;CE_14 CE_22;30.36;69.64
 2014;19;Componente Específico;Computação Gráfica e Processamento de Imagem;1;CE_11;16.07;83.93
 2014;19;Componente Específico;Sistemas Digitais;1;CE_27;16.07;83.93
