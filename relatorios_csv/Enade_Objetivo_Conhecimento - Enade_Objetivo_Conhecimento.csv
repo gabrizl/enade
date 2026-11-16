@@ -28,7 +28,7 @@ um limitador da efi cácia de políticas públicas de redução das desigualdade
 D  a análise de mobilidade social permite a observação de um ciclo vicioso, que se caracteriza por uma 
 subida nas camadas sociais seguida de uma queda, repetindo-se esse ciclo de modo sucessivo.
 E  a ascensão social depende de fatores viabilizadores que estão fora do alcance das camadas pobres, 
-o que ocasiona conflitos sociais em busca do acesso a tais fatores.","Ciência, tecnologia e inovação"
+o que ocasiona conflitos sociais em busca do acesso a tais fatores.",Ciência tecnologia e inovação
 2021,FORMAÇÃO GERAL,FG_02,"QUESTÃO 02
 [FIGURA DO TEXTO I NO CADERNO ORIGINAL: infográfico da Embrapa “A hortaliça é feia ou estragada?”]  
  TEXTO I
@@ -99,7 +99,7 @@ A  I, apenas.
 B  II, apenas.
 C  I e III, apenas.
 D  II e III, apenas.
-E  I, II e III.","Cidades, habitação e qualidade de vida"
+E  I, II e III.",Cidades habitação e qualidade de vida
 2021,FORMAÇÃO GERAL,FG_04,"QUESTÃO 04  
  Além do contexto econômico, o avanço da tecnologia também é um dos responsáveis pelo aumento dos 
 trabalhadores informais. E a tendência de contratação de  freelancers por meio de plataformas digitais,
@@ -129,7 +129,7 @@ A  As asserções I e II são proposições verdadeiras, e a II é uma justifica
 B  As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I.
 C  A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.
 D  A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.
-E  As asserções I e II são proposições falsas.","Estado, sociedade e trabalho"
+E  As asserções I e II são proposições falsas.",Estado sociedade e trabalho
 2021,FORMAÇÃO GERAL,FG_05,"QUESTÃO 05
 [FIGURA NO CADERNO ORIGINAL: mapa da distribuição de óbitos por suicídio indígena]  
  TEXTO I
@@ -261,7 +261,7 @@ A  I e II.
 B  I e IV.
 C  II e III.
 D  I, III e IV.
-E  II, III e IV.","Ética, democracia e cidadania"
+E  II, III e IV.", democracia e cidadania
 2021,COMPONENTE ESPECÍFICO,CE_01,"QUESTÃO 09	
 Quando um computador é multiprogramado, ele 
 geralmente tem múltiplos processos ou threads 
@@ -395,7 +395,7 @@ B	 I e III.
 C	 II e IV.
 D	 I, III e IV.
 E	 II, III e IV.
-","Ética, Computador e Sociedade"
+",Ética Computador e Sociedade
 2021,COMPONENTE ESPECÍFICO,CE_05,"QUESTÃO 13	
 O desenvolvimento de sistemas iterativo e evolutivo é uma abordagem que estabelece ciclos de 
 desenvolvimento, com duração fixa, chamados iterações. O produto de cada iteração é um sistema parcial, 
@@ -1425,7 +1425,7 @@ A Utilização de endereçamento IP estático nas estações clientes.
 B Adoção de criptografia TLS/SSL na camada de aplicação (HTTPS).
 C Uso exclusivo de comutadores (switches) gerenciáveis na rede cabeada.
 D Desativação do servidor DHCP na rede sem fio.
-E Aumento da potência de transmissão do Access Point legítimo.","Ética, Computador e Sociedade"
+E Aumento da potência de transmissão do Access Point legítimo.",Ética Computador e Sociedade
 2017,COMPONENTE ESPECÍFICO,CE_09,"QUESTÃO 17
 Considere um vetor v contendo n elementos inteiros. O algoritmo de ordenação por inserção (Insertion Sort) ordena os elementos de v em ordem decrescente. Abaixo apresenta-se uma implementação incompleta em linguagem C:
 
@@ -1735,7 +1735,7 @@ A As asserções I e II são proposições verdadeiras, e a II é uma justificat
 B As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I.
 C A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.
 D A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.
-E As asserções I e II são proposições falsas.","Responsabilidade social (setor público, privado e terceiro setor)"
+E As asserções I e II são proposições falsas.",Responsabilidade social (setor público privado e terceiro setor)
 2014,FORMAÇÃO GERAL,FG_03,"QUESTÃO 03
 O conceito de Pegada Ecológica contabiliza o consumo de recursos naturais renováveis e a capacidade de absorção de resíduos (biocapacidade) exigidos por uma determinada população ou atividade humana. Quando a pegada ecológica de uma sociedade supera a biocapacidade disponível no planeta, instala-se um estado de déficit ecológico global. Dados de relatórios ambientais internacionais apontam que, desde a década de 1970, a humanidade vem consumindo recursos em ritmo superior à capacidade de regeneração da Terra.
 
@@ -1792,7 +1792,7 @@ A I, apenas.
 B III, apenas.
 C I e II, apenas.
 D II e III, apenas.
-E I, II e III.","Políticas públicas (educação, habitação, saneamento, saúde, transporte, segurança, defesa e desenvolvimento sustentável)"
+E I, II e III.",Políticas públicas (educação habitação saneamento saúde transporte segurança defesa e desenvolvimento sustentável)
 2014,FORMAÇÃO GERAL,FG_08,"QUESTÃO 08
 A Declaração Universal dos Direitos Humanos estabelece que todos os seres humanos nascem livres e iguais em dignidade e direitos. No entanto, a efetivação desses direitos enfrenta obstáculos históricos e estruturais relacionados à discriminação de raça, gênero, orientação sexual e origem socioeconômica em diversas partes do mundo.
 
@@ -1810,7 +1810,7 @@ A A interface está em conformidade com as diretrizes de usabilidade, pois permi
 B A interface viola o princípio de prevenção de erros ao permitir a seleção de uma data de retorno inválida (anterior à data de ida), devendo desabilitar ou restringir visualmente os dias anteriores à data selecionada para a viagem de ida.
 C A exibição de mensagem de erro ao final da transação é a estratégia mais recomendada em IHC para manter a fluidez da interação.
 D O erro observado decorre da ausência de suporte a acessibilidade em dispositivos móveis e não de problemas no fluxo de interação de formulários.
-E A regra de negócio que valida a sequência de datas deve ser executada exclusivamente no banco de dados, sem qualquer interferência na camada de apresentação (interface).",Algoritmos e Estruturas de Dados
+E A regra de negócio que valida a sequência de datas deve ser executada exclusivamente no banco de dados, sem qualquer interferência na camada de apresentação (interface).",Engenharia de Software e Interação Homem-Computador
 2014,COMPONENTE ESPECÍFICO,CE_02,"QUESTÃO 10
 Em sistemas de memória virtual com paginação, a tabela de páginas mapeia endereços virtuais (páginas) em endereços físicos (molduras de página / frames). Cada entrada da tabela de páginas (PTE) contém informações de controle, como o Bit de Validade (BV), que indica se a página correspondente está carregada na memória principal (RAM) ou armazenada no disco (memória secundária).
 
@@ -1831,7 +1831,7 @@ A A instrução será executada normalmente, pois o frame 1111 está alocado na 
 B Ocorrerá uma falta de página (page fault), interrompendo o processo para que o sistema operacional traga a página 6 do disco para a memória principal.
 C O sistema operacional gerará um erro irrecuperável de violação de acesso de memória (segmentation fault) e encerrará o processo imediatamente.
 D O processador efetuará a tradução direta para o endereço físico relativo ao frame 0110 da página 7.
-E A entrada correspondente à página 6 será descartada e substituída pela página 0 sem necessidade de acesso ao disco.",Algoritmos e Estruturas de Dados
+E A entrada correspondente à página 6 será descartada e substituída pela página 0 sem necessidade de acesso ao disco.",Engenharia de Software e Interação Homem-Computador
 2014,COMPONENTE ESPECÍFICO,CE_03,"QUESTÃO 11
 Para a avaliação computacional de um polinômio da forma P(x) = a_n * x^n + a_{n-1} * x^{n-1} + ... + a_1 * x + a_0 para um determinado valor de x, analise os dois algoritmos a seguir:
 
@@ -1937,7 +1937,7 @@ A O Ray Tracing calcula nativamente efeitos ópticos globais, como reflexões es
 B A Rasterização possui maior custo de processamento que o Ray Tracing para a geração de sombras suaves e superfícies reflexivas em tempo real.
 C O Ray Tracing projeta os vértices dos objetos 3D diretamente na tela 2D antes de determinar a visibilidade dos pixels via z-buffer.
 D A Rasterização não suporta a aplicação de texturas e mapeamento de normais (bump mapping) nas superfícies dos polígonos.
-E O Ray Tracing é um método exclusivo para renderização de gráficos vetoriais bidimensionais sem suporte a modelos poligonais 3D.","Linguagens Formais, Autômatos e Compiladores"
+E O Ray Tracing é um método exclusivo para renderização de gráficos vetoriais bidimensionais sem suporte a modelos poligonais 3D.",Linguagens Formais Autômatos e Compiladores
 2014,COMPONENTE ESPECÍFICO,CE_08,"QUESTÃO 16
 Em Sistemas Operacionais, os conceitos de Processo e Thread (linha de execução) são fundamentais para o suporte à concorrência. As threads podem ser implementadas no Espaço do Usuário (User-level Threads - ULT), gerenciadas por uma biblioteca, ou no Espaço do Kernel (Kernel-level Threads - KLT), gerenciadas diretamente pelo sistema operacional.
 
@@ -1952,7 +1952,7 @@ A I, apenas.
 B III, apenas.
 C I e II, apenas.
 D II e III, apenas.
-E I, II e III.",Teoria da Computabilidade e Complexidade
+E I, II e III.",Algoritmos e Estruturas de Dados
 2014,COMPONENTE ESPECÍFICO,CE_09,"QUESTÃO 17
 Considere um banco de dados relacional contendo as tabelas `Estado(UF, nome_estado)` e `Fornecedor(id_fornecedor, nome_fornecedor, UF)`, em que `UF` é a chave primária de `Estado` e chave estrangeira em `Fornecedor`.
 
@@ -2100,7 +2100,7 @@ A O encaminhamento de dados (data forwarding / bypassing) resolve riscos de dado
 B O risco de controle ocorre quando duas instruções distintas tentam acessar o mesmo banco de registradores no mesmo ciclo de clock.
 C A inserção de instruções NOP (No Operation) é uma técnica de hardware que elimina completamente a necessidade de preditores de desvio.
 D Riscos estruturais são causados exclusivamente por dependências de dados do tipo RAW (Read After Write) entre instruções consecutivas.
-E O desvio preditivo estático elimina a necessidade de lavagem (flush) das instruções carregadas incorretamente no pipeline.","Linguagens Formais, Autômatos e Compiladores"
+E O desvio preditivo estático elimina a necessidade de lavagem (flush) das instruções carregadas incorretamente no pipeline.",Linguagens Formais Autômatos e Compiladores
 2014,COMPONENTE ESPECÍFICO,CE_18,"QUESTÃO 26
 No contexto do projeto de compiladores, a fase de análise divide-se em análise léxica, sintática e semântica. Considere a interação concorrente entre o Analisador Léxico (produtor de tokens) e o Analisador Sintático (consumidor de tokens) através de um buffer circular compartilhado de tamanho N com controle de concorrência por variáveis de condição e contadores de tokens (`cont`, `in`, `out`).
 
