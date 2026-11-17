@@ -1,0 +1,25 @@
+﻿Ano;Rank_Geral;Rank_Componente;Questao;Componente;Objetivo_de_Conhecimento;Gabarito_Oficial;Taxa_Acerto_%;Taxa_Erro_%;Dificuldade;Acertos;Erros;Em_Branco;Anulados;Total_Alunos;Status
+2014;1;1;FG_04;Formação Geral;Tecnologias de Informação e Comunicação;B;94.64;5.36;Muito fácil;53;3;0;0;56;Válida
+2014;5;2;FG_08;Formação Geral;Vida urbana e rural;D;85.71;14.29;Muito fácil;48;8;0;0;56;Válida
+2014;8;3;FG_03;Formação Geral;Ecologia;E;83.93;16.07;Fácil;47;9;0;0;56;Válida
+2014;11;4;FG_07;Formação Geral;Políticas públicas (educação, habitação, saneamento, saúde, transporte, segurança, defesa e desenvolvimento sustentável);E;80.36;19.64;Fácil;45;11;0;0;56;Válida
+2014;12;5;FG_06;Formação Geral;"Sociodiversidade e multiculturalismo (violência, tolerância/intolerância, inclusão/exclusão e relações de gênero);";C;75.00;25.00;Fácil;42;14;0;0;56;Válida
+2014;14;6;FG_01;Formação Geral;Cultura e arte;A;57.14;42.86;Média;32;24;0;0;56;Válida
+2014;15;7;FG_02;Formação Geral;Responsabilidade social;C;53.57;46.43;Média;30;26;0;0;56;Válida
+2014;25;8;FG_05;Formação Geral;Avanços tecnológicos;D;33.93;66.07;Difícil;19;37;0;0;56;Válida
+2017;1;1;FG_06;Formação Geral;Processos migratórios;E;94.03;5.97;Muito fácil;63;4;0;0;67;Válida
+2017;3;2;FG_04;Formação Geral;Tecnologias de Informação e Comunicação;B;77.61;22.39;Fácil;52;15;0;0;67;Válida
+2017;9;3;FG_05;Formação Geral;Inovação tecnológica;C;68.66;31.34;Fácil;46;21;0;0;67;Válida
+2017;12;4;FG_02;Formação Geral;Vida urbana e rural;C;65.67;34.33;Fácil;44;23;0;0;67;Válida
+2017;14;5;FG_08;Formação Geral;Responsabilidade social;D;56.72;43.28;Média;38;29;0;0;67;Válida
+2017;20;6;FG_03;Formação Geral;Meio ambiente;B;44.78;55.22;Média;30;37;0;0;67;Válida
+2017;23;7;FG_01;Formação Geral;Globalização e política internacional;C;41.79;58.21;Média;28;39;0;0;67;Válida
+2017;28;8;FG_07;Formação Geral;Cultura e arte;A;28.36;71.64;Difícil;19;48;0;0;67;Válida
+2021;2;1;FG_03;Formação Geral;Cidades, habitação e qualidade de vida;B;70.21;29.79;Fácil;66;28;0;0;94;Válida
+2021;2;1;FG_07;Formação Geral;Promoção da saúde e prevenção de doenças;C;70.21;29.79;Fácil;66;28;0;0;94;Válida
+2021;6;3;FG_06;Formação Geral;Globalização e política internacional;A;69.15;30.85;Fácil;65;29;0;0;94;Válida
+2021;8;4;FG_01;Formação Geral;Ciência, tecnologia e inovação;E;60.64;39.36;Fácil;57;37;0;0;94;Válida
+2021;8;4;FG_05;Formação Geral;Promoção da saúde e prevenção de doenças;A;60.64;39.36;Fácil;57;37;0;0;94;Válida
+2021;13;6;FG_04;Formação Geral;Estado, sociedade e trabalho;B;52.13;47.87;Média;49;45;0;0;94;Válida
+2021;22;7;FG_02;Formação Geral;Segurança alimentar e nutricional;C;30.85;69.15;Difícil;29;65;0;0;94;Válida
+2021;24;8;FG_08;Formação Geral;Ética, democracia e cidadania;D;24.47;75.53;Difícil;23;71;0;0;94;Válida

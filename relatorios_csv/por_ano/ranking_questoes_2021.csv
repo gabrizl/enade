@@ -4,7 +4,7 @@
 2021;2;2;CE_27;Componente Específico;Sistemas Distribuídos;D;70.21;29.79;Fácil;66;28;0;0;94;Válida
 2021;2;1;FG_03;Formação Geral;Cidades, habitação e qualidade de vida;B;70.21;29.79;Fácil;66;28;0;0;94;Válida
 2021;2;1;FG_07;Formação Geral;Promoção da saúde e prevenção de doenças;C;70.21;29.79;Fácil;66;28;0;0;94;Válida
-2021;6;3;FG_06;Formação Geral;Processos de globalização e política internacional;A;69.15;30.85;Fácil;65;29;0;0;94;Válida
+2021;6;3;FG_06;Formação Geral;Globalização e política internacional;A;69.15;30.85;Fácil;65;29;0;0;94;Válida
 2021;7;4;CE_12;Componente Específico;Algoritmos e Estruturas de Dados;A;62.77;37.23;Fácil;59;35;0;0;94;Válida
 2021;8;5;CE_07;Componente Específico;Engenharia de Software;C;60.64;39.36;Fácil;57;37;0;0;94;Válida
 2021;8;5;CE_19;Componente Específico;Probabilidade e Estatística;D;60.64;39.36;Fácil;57;37;0;0;94;Válida
@@ -13,7 +13,7 @@
 2021;12;7;CE_15;Componente Específico;Algoritmos e Estruturas de Dados;C;59.57;40.43;Média;56;38;0;0;94;Válida
 2021;13;6;FG_04;Formação Geral;Estado, sociedade e trabalho;B;52.13;47.87;Média;49;45;0;0;94;Válida
 2021;14;8;CE_02;Componente Específico;Algoritmos e Estruturas de Dados;B;50.00;50.00;Média;47;47;0;0;94;Válida
-2021;14;8;CE_14;Componente Específico;Bancos de Dados;A;50.00;50.00;Média;47;47;0;0;94;Válida
+2021;14;8;CE_14;Componente Específico;Banco de Dados;A;50.00;50.00;Média;47;47;0;0;94;Válida
 2021;16;10;CE_22;Componente Específico;Compiladores;E;46.81;53.19;Média;44;50;0;0;94;Válida
 2021;17;11;CE_10;Componente Específico;Inteligência Artificial;E;45.74;54.26;Média;43;51;0;0;94;Válida
 2021;18;12;CE_11;Componente Específico;Interação Homem-Computador;D;38.30;61.70;Difícil;36;58;0;0;94;Válida

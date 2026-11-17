@@ -190,7 +190,7 @@ def carregar_respostas_alunos():
     Carrega as respostas de alunos válidos por ano para cálculo de estatísticas de distratores.
     """
     respostas_por_ano = {}
-    anos = ['2005', '2008', '2011', '2014', '2017', '2021']
+    anos = ['2014', '2017', '2021']
     for ano in anos:
         caminho = os.path.join(PASTA_MICRODADOS, f"ufcg_cc_respostas_questoes_{ano}.csv")
         if not os.path.exists(caminho):

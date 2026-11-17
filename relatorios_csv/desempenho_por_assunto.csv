@@ -1,6 +1,6 @@
 ﻿Ano;Rank_Assunto_Ano;Componente;Objetivo_de_Conhecimento;Total_Questoes;Questoes;Taxa_Media_Acerto_%;Taxa_Media_Erro_%
 2014;1;Componente Específico;Engenharia de Software e Interação Homem-Computador;1;CE_09;94.64;5.36
-2014;1;Formação Geral;Tecnologias de informação e comunicação;1;FG_04;94.64;5.36
+2014;1;Formação Geral;Tecnologias de Informação e Comunicação;1;FG_04;94.64;5.36
 2014;3;Componente Específico;Banco de Dados;1;CE_16;91.07;8.93
 2014;4;Componente Específico;Sistemas Operacionais e Arquitetura de Computadores;1;CE_12;87.50;12.50
 2014;5;Formação Geral;Vida urbana e rural;1;FG_08;85.71;14.29
@@ -12,7 +12,7 @@
 2014;11;Componente Específico;Linguagens Formais, Autômatos e Compiladores;2;CE_07, CE_17;66.07;33.93
 2014;12;Componente Específico;Lógica e Matemática Discreta;4;CE_06, CE_18, CE_19, CE_24;58.04;41.96
 2014;13;Formação Geral;Cultura e arte;1;FG_01;57.14;42.86
-2014;14;Formação Geral;Responsabilidade social (setor público, privado e terceiro setor);1;FG_02;53.57;46.43
+2014;14;Formação Geral;Responsabilidade social;1;FG_02;53.57;46.43
 2014;15;Componente Específico;Teoria da Computabilidade e Complexidade;3;CE_04, CE_08, CE_20;38.10;61.90
 2014;16;Componente Específico;Fundamentos e Técnicas de Programação;1;CE_15;35.71;64.29
 2014;17;Formação Geral;Avanços tecnológicos;1;FG_05;33.93;66.07
@@ -28,15 +28,15 @@
 2017;7;Componente Específico;Lógica e Matemática Discreta;1;CE_06;68.66;31.34
 2017;7;Formação Geral;Inovação tecnológica;1;FG_05;68.66;31.34
 2017;9;Componente Específico;Compiladores;1;CE_22;67.16;32.84
-2017;10;Formação Geral;Vida urbana e vida rural;1;FG_02;65.67;34.33
-2017;11;Componente Específico;Inteligência Artificial e Computacional;2;CE_09, CE_24;62.69;37.31
+2017;10;Formação Geral;Vida urbana e rural;1;FG_02;65.67;34.33
+2017;11;Componente Específico;Inteligência Artificial;2;CE_09, CE_24;62.69;37.31
 2017;12;Formação Geral;Responsabilidade social;1;FG_08;56.72;43.28
 2017;13;Componente Específico;Teoria dos Grafos;1;CE_16;55.22;44.78
 2017;14;Componente Específico;Engenharia de Software e Interação Homem-Computador;2;CE_02, CE_20;52.24;47.76
 2017;15;Componente Específico;Redes de Computadores;2;CE_07, CE_12;45.52;54.48
 2017;16;Componente Específico;Sistemas Distribuídos;1;CE_23;44.78;55.22
 2017;16;Formação Geral;Meio ambiente;1;FG_03;44.78;55.22
-2017;18;Componente Específico;Arquitetura de Computadores e Sistemas Operacionais;3;CE_04, CE_21, CE_27;42.29;57.71
+2017;18;Componente Específico;Sistemas Operacionais e Arquitetura de Computadores;3;CE_04, CE_21, CE_27;42.29;57.71
 2017;19;Formação Geral;Globalização e política internacional;1;FG_01;41.79;58.21
 2017;20;Componente Específico;Banco de Dados;3;CE_10, CE_11, CE_26;41.29;58.71
 2017;21;Componente Específico;Algoritmos e Estruturas de Dados;2;CE_01, CE_25;41.04;58.96
@@ -46,7 +46,7 @@
 2021;1;Componente Específico;Lógica e Matemática Discreta;1;CE_08;70.21;29.79
 2021;1;Componente Específico;Sistemas Distribuídos;1;CE_27;70.21;29.79
 2021;1;Formação Geral;Cidades, habitação e qualidade de vida;1;FG_03;70.21;29.79
-2021;4;Formação Geral;Processos de globalização e política internacional;1;FG_06;69.15;30.85
+2021;4;Formação Geral;Globalização e política internacional;1;FG_06;69.15;30.85
 2021;5;Formação Geral;Promoção da saúde e prevenção de doenças;2;FG_05, FG_07;65.43;34.57
 2021;6;Componente Específico;Inteligência Artificial;2;CE_03, CE_10;61.70;38.30
 2021;7;Componente Específico;Engenharia de Software;1;CE_07;60.64;39.36
@@ -54,7 +54,7 @@
 2021;7;Formação Geral;Ciência, tecnologia e inovação;1;FG_01;60.64;39.36
 2021;10;Componente Específico;Algoritmos e Estruturas de Dados;3;CE_02, CE_12, CE_15;57.45;42.55
 2021;11;Formação Geral;Estado, sociedade e trabalho;1;FG_04;52.13;47.87
-2021;12;Componente Específico;Bancos de Dados;1;CE_14;50.00;50.00
+2021;12;Componente Específico;Banco de Dados;1;CE_14;50.00;50.00
 2021;13;Componente Específico;Compiladores;1;CE_22;46.81;53.19
 2021;14;Componente Específico;Redes de Computadores;1;CE_16;38.30;61.70
 2021;15;Componente Específico;Sistemas Operacionais;1;CE_01;31.91;68.09

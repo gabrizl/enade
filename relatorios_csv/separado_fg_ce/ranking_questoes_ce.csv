@@ -1,0 +1,82 @@
+﻿Ano;Rank_Geral;Rank_Componente;Questao;Componente;Objetivo_de_Conhecimento;Gabarito_Oficial;Taxa_Acerto_%;Taxa_Erro_%;Dificuldade;Acertos;Erros;Em_Branco;Anulados;Total_Alunos;Status
+2014;1;1;CE_09;Componente Específico;Engenharia de Software e Interação Homem-Computador;A;94.64;5.36;Muito fácil;53;3;0;0;56;Válida
+2014;3;2;CE_16;Componente Específico;Banco de Dados;C;91.07;8.93;Muito fácil;51;5;0;0;56;Válida
+2014;4;3;CE_12;Componente Específico;Sistemas Operacionais e Arquitetura de Computadores;E;87.50;12.50;Muito fácil;49;7;0;0;56;Válida
+2014;5;4;CE_01;Componente Específico;Algoritmos e Estruturas de Dados;B;85.71;14.29;Muito fácil;48;8;0;0;56;Válida
+2014;5;4;CE_02;Componente Específico;Algoritmos e Estruturas de Dados;A;85.71;14.29;Muito fácil;48;8;0;0;56;Válida
+2014;8;6;CE_17;Componente Específico;Linguagens Formais, Autômatos e Compiladores;D;83.93;16.07;Fácil;47;9;0;0;56;Válida
+2014;8;6;CE_19;Componente Específico;Lógica e Matemática Discreta;B;83.93;16.07;Fácil;47;9;0;0;56;Válida
+2014;13;8;CE_21;Componente Específico;Paradigmas de Linguagens de Programação;C;71.43;28.57;Fácil;40;16;0;0;56;Válida
+2014;16;9;CE_18;Componente Específico;Lógica e Matemática Discreta;C;51.79;48.21;Média;29;27;0;0;56;Válida
+2014;17;10;CE_05;Componente Específico;Algoritmos e Estruturas de Dados;B;50.00;50.00;Média;28;28;0;0;56;Válida
+2014;18;11;CE_06;Componente Específico;Lógica e Matemática Discreta;B;48.21;51.79;Média;27;29;0;0;56;Válida
+2014;18;11;CE_07;Componente Específico;Linguagens Formais, Autômatos e Compiladores;C;48.21;51.79;Média;27;29;0;0;56;Válida
+2014;18;11;CE_08;Componente Específico;Teoria da Computabilidade e Complexidade;C;48.21;51.79;Média;27;29;0;0;56;Válida
+2014;18;11;CE_24;Componente Específico;Lógica e Matemática Discreta;A;48.21;51.79;Média;27;29;0;0;56;Válida
+2014;22;15;CE_04;Componente Específico;Teoria da Computabilidade e Complexidade;D;37.50;62.50;Difícil;21;35;0;0;56;Válida
+2014;23;16;CE_15;Componente Específico;Fundamentos e Técnicas de Programação;D;35.71;64.29;Difícil;20;36;0;0;56;Válida
+2014;23;16;CE_22;Componente Específico;Teoria dos Grafos;A;35.71;64.29;Difícil;20;36;0;0;56;Válida
+2014;26;18;CE_20;Componente Específico;Teoria da Computabilidade e Complexidade;A;28.57;71.43;Difícil;16;40;0;0;56;Válida
+2014;27;19;CE_14;Componente Específico;Teoria dos Grafos;E;25.00;75.00;Difícil;14;42;0;0;56;Válida
+2014;28;20;CE_11;Componente Específico;Computação Gráfica e Processamento de Imagem;A;16.07;83.93;Difícil;9;47;0;0;56;Válida
+2014;28;20;CE_27;Componente Específico;Sistemas Digitais;E;16.07;83.93;Difícil;9;47;0;0;56;Válida
+2014;-;-;CE_03;Componente Específico;Sistemas Operacionais e Arquitetura de Computadores;X;;;-;0;0;0;56;56;Anulada / Desconsiderada
+2014;-;-;CE_10;Componente Específico;Inteligência Artificial;X;;;-;0;0;0;56;56;Anulada / Desconsiderada
+2014;-;-;CE_13;Componente Específico;Sistemas Operacionais e Arquitetura de Computadores;X;;;-;0;0;0;56;56;Anulada / Desconsiderada
+2014;-;-;CE_23;Componente Específico;Redes de Computadores e Sistemas Distribuídos;X;;;-;0;0;0;56;56;Anulada / Desconsiderada
+2014;-;-;CE_25;Componente Específico;Sistemas Operacionais e Arquitetura de Computadores;X;;;-;0;0;0;56;56;Anulada / Desconsiderada
+2014;-;-;CE_26;Componente Específico;Fundamentos e Técnicas de Programação;X;;;-;0;0;0;56;56;Anulada / Desconsiderada
+2017;2;1;CE_09;Componente Específico;Inteligência Artificial;A;80.60;19.40;Fácil;54;13;0;0;67;Válida
+2017;3;2;CE_03;Componente Específico;Paradigmas de Linguagens de Programação;E;77.61;22.39;Fácil;52;15;0;0;67;Válida
+2017;3;2;CE_14;Componente Específico;Fundamentos e Técnicas de Programação;C;77.61;22.39;Fácil;52;15;0;0;67;Válida
+2017;6;4;CE_05;Componente Específico;Sistemas Digitais;B;76.12;23.88;Fácil;51;16;0;0;67;Válida
+2017;7;5;CE_20;Componente Específico;Engenharia de Software e Interação Homem-Computador;D;74.63;25.37;Fácil;50;17;0;0;67;Válida
+2017;8;6;CE_08;Componente Específico;Ética, Computador e Sociedade;E;71.64;28.36;Fácil;48;19;0;0;67;Válida
+2017;9;7;CE_06;Componente Específico;Lógica e Matemática Discreta;C;68.66;31.34;Fácil;46;21;0;0;67;Válida
+2017;11;8;CE_22;Componente Específico;Compiladores;B;67.16;32.84;Fácil;45;22;0;0;67;Válida
+2017;13;9;CE_12;Componente Específico;Redes de Computadores;D;62.69;37.31;Fácil;42;25;0;0;67;Válida
+2017;15;10;CE_10;Componente Específico;Banco de Dados;D;55.22;44.78;Média;37;30;0;0;67;Válida
+2017;15;10;CE_16;Componente Específico;Teoria dos Grafos;E;55.22;44.78;Média;37;30;0;0;67;Válida
+2017;17;12;CE_11;Componente Específico;Banco de Dados;E;50.75;49.25;Média;34;33;0;0;67;Válida
+2017;18;13;CE_04;Componente Específico;Sistemas Operacionais e Arquitetura de Computadores;C;47.76;52.24;Média;32;35;0;0;67;Válida
+2017;19;14;CE_01;Componente Específico;Algoritmos e Estruturas de Dados;A;46.27;53.73;Média;31;36;0;0;67;Válida
+2017;20;15;CE_23;Componente Específico;Sistemas Distribuídos;E;44.78;55.22;Média;30;37;0;0;67;Válida
+2017;20;15;CE_24;Componente Específico;Inteligência Artificial;B;44.78;55.22;Média;30;37;0;0;67;Válida
+2017;24;17;CE_21;Componente Específico;Sistemas Operacionais e Arquitetura de Computadores;E;40.30;59.70;Média;27;40;0;0;67;Válida
+2017;25;18;CE_27;Componente Específico;Sistemas Operacionais e Arquitetura de Computadores;E;38.81;61.19;Difícil;26;41;0;0;67;Válida
+2017;26;19;CE_25;Componente Específico;Algoritmos e Estruturas de Dados;D;35.82;64.18;Difícil;24;43;0;0;67;Válida
+2017;27;20;CE_02;Componente Específico;Engenharia de Software e Interação Homem-Computador;C;29.85;70.15;Difícil;20;47;0;0;67;Válida
+2017;28;21;CE_07;Componente Específico;Redes de Computadores;D;28.36;71.64;Difícil;19;48;0;0;67;Válida
+2017;30;22;CE_15;Componente Específico;Teoria da Computação;A;26.87;73.13;Difícil;18;49;0;0;67;Válida
+2017;31;23;CE_19;Componente Específico;Computação Gráfica e Processamento de Imagem;B;25.37;74.63;Difícil;17;50;0;0;67;Válida
+2017;32;24;CE_26;Componente Específico;Banco de Dados;A;17.91;82.09;Difícil;12;55;0;0;67;Válida
+2017;-;-;CE_13;Componente Específico;Lógica e Matemática Discreta;X;;;-;0;0;0;67;67;Anulada / Desconsiderada
+2017;-;-;CE_17;Componente Específico;Teoria da Computação;X;;;-;0;0;0;67;67;Anulada / Desconsiderada
+2017;-;-;CE_18;Componente Específico;Computação Gráfica e Processamento de Imagem;X;;;-;0;0;0;67;67;Anulada / Desconsiderada
+2021;1;1;CE_03;Componente Específico;Inteligência Artificial;D;77.66;22.34;Fácil;73;21;0;0;94;Válida
+2021;2;2;CE_08;Componente Específico;Lógica e Matemática Discreta;B;70.21;29.79;Fácil;66;28;0;0;94;Válida
+2021;2;2;CE_27;Componente Específico;Sistemas Distribuídos;D;70.21;29.79;Fácil;66;28;0;0;94;Válida
+2021;7;4;CE_12;Componente Específico;Algoritmos e Estruturas de Dados;A;62.77;37.23;Fácil;59;35;0;0;94;Válida
+2021;8;5;CE_07;Componente Específico;Engenharia de Software;C;60.64;39.36;Fácil;57;37;0;0;94;Válida
+2021;8;5;CE_19;Componente Específico;Probabilidade e Estatística;D;60.64;39.36;Fácil;57;37;0;0;94;Válida
+2021;12;7;CE_15;Componente Específico;Algoritmos e Estruturas de Dados;C;59.57;40.43;Média;56;38;0;0;94;Válida
+2021;14;8;CE_02;Componente Específico;Algoritmos e Estruturas de Dados;B;50.00;50.00;Média;47;47;0;0;94;Válida
+2021;14;8;CE_14;Componente Específico;Banco de Dados;A;50.00;50.00;Média;47;47;0;0;94;Válida
+2021;16;10;CE_22;Componente Específico;Compiladores;E;46.81;53.19;Média;44;50;0;0;94;Válida
+2021;17;11;CE_10;Componente Específico;Inteligência Artificial;E;45.74;54.26;Média;43;51;0;0;94;Válida
+2021;18;12;CE_11;Componente Específico;Interação Homem-Computador;D;38.30;61.70;Difícil;36;58;0;0;94;Válida
+2021;18;12;CE_16;Componente Específico;Redes de Computadores;E;38.30;61.70;Difícil;36;58;0;0;94;Válida
+2021;20;14;CE_20;Componente Específico;Organização e Arquitetura de Computadores;B;34.04;65.96;Difícil;32;62;0;0;94;Válida
+2021;21;15;CE_01;Componente Específico;Sistemas Operacionais;E;31.91;68.09;Difícil;30;64;0;0;94;Válida
+2021;23;16;CE_06;Componente Específico;Organização e Arquitetura de Computadores;C;28.72;71.28;Difícil;27;67;0;0;94;Válida
+2021;24;17;CE_26;Componente Específico;Teoria dos Grafos;C;24.47;75.53;Difícil;23;71;0;0;94;Válida
+2021;26;18;CE_23;Componente Específico;Teoria da Computação;E;22.34;77.66;Difícil;21;73;0;0;94;Válida
+2021;27;19;CE_18;Componente Específico;Interação Homem-Computador;A;15.96;84.04;Difícil;15;79;0;0;94;Válida
+2021;-;-;CE_04;Componente Específico;Ética, Computador e Sociedade;X;;;-;0;0;0;94;94;Anulada / Desconsiderada
+2021;-;-;CE_05;Componente Específico;Engenharia de Software;X;;;-;0;0;0;94;94;Anulada / Desconsiderada
+2021;-;-;CE_09;Componente Específico;Sistemas Operacionais;X;;;-;0;0;0;94;94;Anulada / Desconsiderada
+2021;-;-;CE_13;Componente Específico;Redes de Computadores;X;;;-;0;0;0;94;94;Anulada / Desconsiderada
+2021;-;-;CE_17;Componente Específico;Redes de Computadores;X;;;-;0;0;0;94;94;Anulada / Desconsiderada
+2021;-;-;CE_21;Componente Específico;Computação Gráfica e Processamento de Imagem;Z;;;-;0;0;0;94;94;Anulada / Desconsiderada
+2021;-;-;CE_24;Componente Específico;Fundamentos e Técnicas de Programação;X;;;-;0;0;0;94;94;Anulada / Desconsiderada
+2021;-;-;CE_25;Componente Específico;Paradigmas de Linguagens de Programação;Z;;;-;0;0;0;94;94;Anulada / Desconsiderada

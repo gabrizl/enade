@@ -6,6 +6,7 @@ from collections import defaultdict
 
 PASTA_RELATORIOS = "relatorios_csv"
 PASTA_POR_ANO = os.path.join(PASTA_RELATORIOS, "por_ano")
+PASTA_SEPARADO = os.path.join(PASTA_RELATORIOS, "separado_fg_ce")
 
 ARQUIVO_ENTRADA = os.path.join(PASTA_RELATORIOS, "tabela_resumo_desempenho_questoes.csv")
 ARQUIVO_OBJETIVOS = os.path.join(PASTA_RELATORIOS, "Enade_Objetivo_Conhecimento - Enade_Objetivo_Conhecimento.csv")
@@ -41,6 +42,8 @@ GABARITOS = {
     '2021': {'FG': 'ECBBAACD', 'CE': 'EBDXXCCBXEDAXACEXADBZEEXZCD'},
 }
 
+ANOS_EXCLUIDOS = {'2005', '2008', '2011'}
+
 def carregar_dados():
     caminho = ARQUIVO_ENTRADA
     if not os.path.exists(caminho):
@@ -50,7 +53,17 @@ def carregar_dados():
         else:
             raise FileNotFoundError(f"Arquivo de dados não encontrado: {ARQUIVO_ENTRADA}")
     with open(caminho, 'r', encoding='utf-8-sig') as f:
-        return list(csv.DictReader(f, delimiter=';'))
+        return [r for r in csv.DictReader(f, delimiter=';') if r.get('Ano', '').strip() not in ANOS_EXCLUIDOS]
+
+NORMALIZAR_OBJETIVOS = {
+    "Bancos de Dados": "Banco de Dados",
+    "Inteligência Artificial e Computacional": "Inteligência Artificial",
+    "Arquitetura de Computadores e Sistemas Operacionais": "Sistemas Operacionais e Arquitetura de Computadores",
+    "Tecnologias de informação e comunicação": "Tecnologias de Informação e Comunicação",
+    "Vida urbana e vida rural": "Vida urbana e rural",
+    "Processos de globalização e política internacional": "Globalização e política internacional",
+    "Responsabilidade social (setor público, privado e terceiro setor)": "Responsabilidade social",
+}
 
 def carregar_objetivos():
     if not os.path.exists(ARQUIVO_OBJETIVOS):
@@ -67,6 +80,7 @@ def carregar_objetivos():
             ano = row[0].strip()
             questao = row[2].strip()
             obj = row[4].strip() if len(row) > 4 else ''
+            obj = NORMALIZAR_OBJETIVOS.get(obj, obj)
             objetivos_map[(ano, questao)] = obj
     return objetivos_map
 
@@ -381,6 +395,34 @@ def salvar_csv_dificuldade(dados_dif, caminho_saida=ARQUIVO_DIFICULDADE):
         writer.writerows(dados_dif)
     print(f"[OK] Arquivo de Padrão de Dificuldade salvo em: {caminho_saida}")
 
+def salvar_separado_fg_ce(dados_ranqueados, dados_assuntos):
+    """Exporta arquivos CSV estritamente separados para Formação Geral (FG) e Componente Específico (CE)."""
+    os.makedirs(PASTA_SEPARADO, exist_ok=True)
+    for comp_curto, comp_nome in [('FG', 'Formação Geral'), ('CE', 'Componente Específico')]:
+        q_comp = [r for r in dados_ranqueados if r['Tipo_Curto'] == comp_curto]
+        salvar_csv_ranking(q_comp, os.path.join(PASTA_SEPARADO, f"ranking_questoes_{comp_curto.lower()}.csv"))
+
+        a_comp = [r for r in dados_assuntos if r['Componente'] == comp_nome]
+        salvar_csv_assuntos(a_comp, os.path.join(PASTA_SEPARADO, f"desempenho_assuntos_{comp_curto.lower()}.csv"))
+
+    # Padrão de dificuldade separado por FG vs CE
+    anos = sorted(set(r['Ano'] for r in dados_ranqueados))
+    niveis = ['Muito difícil', 'Difícil', 'Média', 'Fácil', 'Muito fácil']
+    resumo_sep = []
+    for ano in anos:
+        for comp_curto, comp_nome in [('FG', 'Formação Geral'), ('CE', 'Componente Específico')]:
+            validas = [r for r in dados_ranqueados if r['Ano'] == ano and r['Tipo_Curto'] == comp_curto and r['Status'] == 'Válida']
+            total = len(validas)
+            linha = {'Ano': ano, 'Componente': comp_nome, 'Total_Validas': total}
+            for n in niveis:
+                qtd = sum(1 for r in validas if r['Dificuldade'] == n)
+                pct = (qtd / total * 100) if total else 0
+                chave = n.replace(' ', '_').replace('í', 'i').replace('é', 'e').replace('á', 'a')
+                linha[f'Qtd_{chave}'] = qtd
+                linha[f'Pct_{chave}'] = round(pct, 2)
+            resumo_sep.append(linha)
+    salvar_csv_dificuldade(resumo_sep, os.path.join(PASTA_SEPARADO, "padrao_dificuldade_fg_vs_ce.csv"))
+
 def exibir_tabela(dados, ano_filtro=None, comp_filtro=None, apenas_validas=False):
     anos = sorted(set(r['Ano'] for r in dados))
     if ano_filtro:
@@ -425,6 +467,7 @@ if __name__ == '__main__':
     salvar_csv_estatisticas(estatisticas_anuais)
     salvar_csv_assuntos(dados_assuntos)
     salvar_csv_dificuldade(padrao_dificuldade)
+    salvar_separado_fg_ce(dados_ranqueados, dados_assuntos)
 
     if args.tabela or args.ano or args.tipo:
         exibir_tabela(dados_ranqueados, ano_filtro=args.ano, comp_filtro=args.tipo, apenas_validas=args.apenas_validas)
