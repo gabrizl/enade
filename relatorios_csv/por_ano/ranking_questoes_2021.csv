@@ -2,16 +2,16 @@
 2021;1;1;CE_03;Componente Específico;Inteligência Artificial;D;77.66;22.34;Fácil;73;21;0;0;94;Válida
 2021;2;2;CE_08;Componente Específico;Lógica e Matemática Discreta;B;70.21;29.79;Fácil;66;28;0;0;94;Válida
 2021;2;2;CE_27;Componente Específico;Sistemas Distribuídos;D;70.21;29.79;Fácil;66;28;0;0;94;Válida
-2021;2;1;FG_03;Formação Geral;Cidades, habitação e qualidade de vida;B;70.21;29.79;Fácil;66;28;0;0;94;Válida
+2021;2;1;FG_03;Formação Geral;Cidades habitação e qualidade de vida;B;70.21;29.79;Fácil;66;28;0;0;94;Válida
 2021;2;1;FG_07;Formação Geral;Promoção da saúde e prevenção de doenças;C;70.21;29.79;Fácil;66;28;0;0;94;Válida
 2021;6;3;FG_06;Formação Geral;Globalização e política internacional;A;69.15;30.85;Fácil;65;29;0;0;94;Válida
 2021;7;4;CE_12;Componente Específico;Algoritmos e Estruturas de Dados;A;62.77;37.23;Fácil;59;35;0;0;94;Válida
 2021;8;5;CE_07;Componente Específico;Engenharia de Software;C;60.64;39.36;Fácil;57;37;0;0;94;Válida
 2021;8;5;CE_19;Componente Específico;Probabilidade e Estatística;D;60.64;39.36;Fácil;57;37;0;0;94;Válida
-2021;8;4;FG_01;Formação Geral;Ciência, tecnologia e inovação;E;60.64;39.36;Fácil;57;37;0;0;94;Válida
+2021;8;4;FG_01;Formação Geral;Ciência tecnologia e inovação;E;60.64;39.36;Fácil;57;37;0;0;94;Válida
 2021;8;4;FG_05;Formação Geral;Promoção da saúde e prevenção de doenças;A;60.64;39.36;Fácil;57;37;0;0;94;Válida
 2021;12;7;CE_15;Componente Específico;Algoritmos e Estruturas de Dados;C;59.57;40.43;Média;56;38;0;0;94;Válida
-2021;13;6;FG_04;Formação Geral;Estado, sociedade e trabalho;B;52.13;47.87;Média;49;45;0;0;94;Válida
+2021;13;6;FG_04;Formação Geral;Estado sociedade e trabalho;B;52.13;47.87;Média;49;45;0;0;94;Válida
 2021;14;8;CE_02;Componente Específico;Algoritmos e Estruturas de Dados;B;50.00;50.00;Média;47;47;0;0;94;Válida
 2021;14;8;CE_14;Componente Específico;Banco de Dados;A;50.00;50.00;Média;47;47;0;0;94;Válida
 2021;16;10;CE_22;Componente Específico;Compiladores;E;46.81;53.19;Média;44;50;0;0;94;Válida
@@ -23,10 +23,10 @@
 2021;22;7;FG_02;Formação Geral;Segurança alimentar e nutricional;C;30.85;69.15;Difícil;29;65;0;0;94;Válida
 2021;23;16;CE_06;Componente Específico;Organização e Arquitetura de Computadores;C;28.72;71.28;Difícil;27;67;0;0;94;Válida
 2021;24;17;CE_26;Componente Específico;Teoria dos Grafos;C;24.47;75.53;Difícil;23;71;0;0;94;Válida
-2021;24;8;FG_08;Formação Geral;Ética, democracia e cidadania;D;24.47;75.53;Difícil;23;71;0;0;94;Válida
+2021;24;8;FG_08;Formação Geral;democracia e cidadania;D;24.47;75.53;Difícil;23;71;0;0;94;Válida
 2021;26;18;CE_23;Componente Específico;Teoria da Computação;E;22.34;77.66;Difícil;21;73;0;0;94;Válida
 2021;27;19;CE_18;Componente Específico;Interação Homem-Computador;A;15.96;84.04;Difícil;15;79;0;0;94;Válida
-2021;-;-;CE_04;Componente Específico;Ética, Computador e Sociedade;X;;;-;0;0;0;94;94;Anulada / Desconsiderada
+2021;-;-;CE_04;Componente Específico;Ética Computador e Sociedade;X;;;-;0;0;0;94;94;Anulada / Desconsiderada
 2021;-;-;CE_05;Componente Específico;Engenharia de Software;X;;;-;0;0;0;94;94;Anulada / Desconsiderada
 2021;-;-;CE_09;Componente Específico;Sistemas Operacionais;X;;;-;0;0;0;94;94;Anulada / Desconsiderada
 2021;-;-;CE_13;Componente Específico;Redes de Computadores;X;;;-;0;0;0;94;94;Anulada / Desconsiderada

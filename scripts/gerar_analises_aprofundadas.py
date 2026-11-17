@@ -16,12 +16,14 @@ ARQUIVO_OPCOES = os.path.join(PASTA_RELATORIOS, "estatistica_distribuicao_opcoes
 ARQUIVO_MAIS_ERRADAS = os.path.join(PASTA_RELATORIOS, "analise_questoes_mais_erradas.csv")
 ARQUIVO_ANULADAS = os.path.join(PASTA_RELATORIOS, "analise_questoes_anuladas.csv")
 ARQUIVO_COMPARATIVO_ASSUNTOS = os.path.join(PASTA_RELATORIOS, "comparativo_assuntos_longitudinal.csv")
+ARQUIVO_ANALISE_GERAL = os.path.join(PASTA_RELATORIOS, "analise_geral_questoes.csv")
 
 # Mapeamento Curricular UFCG (Ciência da Computação)
 MAPEAMENTO_CURRICULO_UFCG = {
+     # --- COMPONENTE ESPECÍFICO ---
     'Algoritmos e Estruturas de Dados': {
         'status': 'Obrigatória',
-        'disciplina': 'Estruturas de Dados e Algoritmos (EDA) / Lab. EDA (LEDA)'
+        'disciplina': 'Estruturas de Dados e Algoritmos (EDA) / Lab. EDA (LEDA) / Análise e Técnicas de Algoritmos (ATAL)'
     },
     'Banco de Dados': {
         'status': 'Obrigatória',
@@ -29,47 +31,39 @@ MAPEAMENTO_CURRICULO_UFCG = {
     },
     'Engenharia de Software': {
         'status': 'Obrigatória',
-        'disciplina': 'Engenharia de Software I (ES1)'
+        'disciplina': 'Engenharia de Software (ES) / Análise de Sistemas (AS) / Projeto de Software I/II (P1/P2)'
     },
     'Engenharia de Software e Interação Homem-Computador': {
-        'status': 'Obrigatória / Eletiva',
-        'disciplina': 'Engenharia de Software / IHC'
+        'status': 'Obrigatória / Optativa',
+        'disciplina': 'Engenharia de Software (ES) / Interface Humano-Computador (IHC - optativa)'
     },
     'Fundamentos e Técnicas de Programação': {
         'status': 'Obrigatória',
-        'disciplina': 'Programação I / Programação II (LP1/LP2)'
+        'disciplina': 'Programação I (P1) / Lab. P1 (LP1) / Programação II (P2) / Lab. P2 (LP2)'
     },
-    'Interação Homem-Computador': {
-        'status': 'Obrigatória (PPC 2017) / Optativa (PPC antigo)',
-        'disciplina': 'Interação Homem-Computador (IHC)'
-    },
-    'Linguagens Formais, Autômatos e Compiladores': {
-        'status': 'Obrigatória',
-        'disciplina': 'Teoria da Computação / Compiladores'
+    'Interação Homem-Computador (IHC)': {
+        'status': 'Obrigatória / Optativa',
+        'disciplina': 'Análise de Sistemas (AS) / Interface Humano-Computador (IHC - optativa)'
     },
     'Lógica e Matemática Discreta': {
         'status': 'Obrigatória',
-        'disciplina': 'Lógica para Computação / Matemática Discreta'
+        'disciplina': 'Fundamentos de Matemática para Ciência da Computação I e II / Lógica para Computação'
     },
     'Organização e Arquitetura de Computadores': {
         'status': 'Obrigatória',
-        'disciplina': 'Organização e Arquitetura de Computadores (OAC)'
+        'disciplina': 'Organização e Arquitetura de Computadores (OAC) / Introdução à Computação (IC)'
     },
     'Sistemas Operacionais': {
         'status': 'Obrigatória',
-        'disciplina': 'Sistemas Operacionais (SO)'
-    },
-    'Sistemas Operacionais e Arquitetura de Computadores': {
-        'status': 'Obrigatória',
-        'disciplina': 'Sistemas Operacionais / OAC'
+        'disciplina': 'Sistemas Operacionais (SO) / Programação Concorrente (PC)'
     },
     'Redes de Computadores': {
         'status': 'Obrigatória',
-        'disciplina': 'Redes de Computadores'
+        'disciplina': 'Redes de Computadores (RC)'
     },
     'Redes de Computadores e Sistemas Distribuídos': {
         'status': 'Obrigatória / Optativa',
-        'disciplina': 'Redes de Computadores / Sistemas Distribuídos'
+        'disciplina': 'Redes de Computadores (RC) / Sistemas Distribuídos (SD)'
     },
     'Paradigmas de Linguagens de Programação': {
         'status': 'Obrigatória',
@@ -79,37 +73,91 @@ MAPEAMENTO_CURRICULO_UFCG = {
         'status': 'Obrigatória',
         'disciplina': 'Teoria da Computação (TC)'
     },
-    'Teoria da Computabilidade e Complexidade': {
+    'Teoria dos Grafos': {
+        'status': 'Obrigatória',
+        'disciplina': 'Teoria dos Grafos (TG)'
+    },
+    'Sistemas Distribuídos': {
+        'status': 'Obrigatória / Optativa',
+        'disciplina': 'Programação Concorrente (PC) / Sistemas Distribuídos (SD)'
+    },
+    'Inteligência Artificial': {
+        'status': 'Obrigatória',
+        'disciplina': 'Inteligência Artificial (IA)'
+    },
+    'Sistemas Digitais': {
+        'status': 'Obrigatória / Optativa',
+        'disciplina': 'Introdução a computação / Projeto de Sistemas Digitais (Optativa)'
+    },
+    'Probabilidade e Estatística': {
+        'status': 'Obrigatória',
+        'disciplina': 'Introdução à Probabilidade (IP) / Estatística Aplicada (EA)'
+    },
+    'Compiladores': {
+        'status': 'Obrigatória',
+        'disciplina': 'Compiladores (COMP)'
+    },
+    'Linguagens Formais, Autômatos e Compiladores': { #Antes de 2014
+        'status': 'Obrigatória',
+        'disciplina': 'Teoria da Computação / Compiladores'
+    },
+    'Sistemas Operacionais e Arquitetura de Computadores': { #Antes de 2014
+        'status': 'Obrigatória',
+        'disciplina': 'Sistemas Operacionais (SO) / Organização e Arquitetura de Computadores (OAC)'
+    },
+    'Teoria da Computabilidade e Complexidade': { #Antes de 2014
         'status': 'Obrigatória (Tópico Avançado)',
         'disciplina': 'Teoria da Computação / Análise e Técnicas de Algoritmos (ATAL)'
     },
-    'Teoria dos Grafos': {
-        'status': 'Obrigatória',
-        'disciplina': 'Teoria dos Grafos'
-    },
-    'Sistemas Distribuídos': {
-        'status': 'Optativa / Eletiva',
-        'disciplina': 'Sistemas Distribuídos (SD)'
-    },
-    'Inteligência Artificial': {
-        'status': 'Optativa / Eletiva',
-        'disciplina': 'Inteligência Artificial (IA)'
-    },
-    'Inteligência Artificial e Computacional': {
+    'Inteligência Artificial e Computacional': { #Antes de 2014
         'status': 'Optativa / Eletiva',
         'disciplina': 'Inteligência Artificial (IA)'
     },
     'Computação Gráfica e Processamento de Imagem': {
-        'status': 'Optativa (Não Obrigatória)',
-        'disciplina': 'Computação Gráfica / Processamento Digital de Imagens'
+        'status': 'Ausente',
+        'disciplina': 'Atualmente não há disciplina no currículo da UFCG.'
     },
-    'Sistemas Digitais': {
-        'status': 'Obrigatória Básica / Optativa Avançada',
-        'disciplina': 'Laboratório de Circuitos Digitais'
-    },
+    # --- FORMAÇÃO GERAL ---
     'Ética, Computador e Sociedade': {
         'status': 'Obrigatória',
-        'disciplina': 'Metodologia Científica / Informática e Sociedade'
+        'disciplina': 'Direito e Cidadania / Informática e Sociedade'
+    },
+    'Ética, Computador e Sociedade / Segurança': {
+            'status': 'Obrigatória / Optativa',
+            'disciplina': 'Direito e Cidadania / Segurança de Sistemas / Informática e Sociedade'
+    },
+
+    'Ciência, tecnologia e inovação / Inovação tecnológica': {
+        'status': 'Obrigatória / Optativa',
+        'disciplina': 'Direito e Cidadania / Economia / Empreendedorismo e Inovação'
+    },
+    'Estado, sociedade e trabalho / Relações de trabalho / Gig Economy': {
+        'status': 'Obrigatória / Optativa',
+        'disciplina': 'Direito e Cidadania / Economia / Informática e Sociedade'
+    },
+    'Ética, democracia e cidadania / Políticas públicas': {
+        'status': 'Obrigatória / Optativa',
+        'disciplina': 'Direito e Cidadania / Língua Portuguesa / Informática e Sociedade'
+    },
+    'Cidades, habitação e qualidade de vida / Mobilidade urbana': {
+        'status': 'Obrigatória / Optativa',
+        'disciplina': 'Economia / Sistemas de Informações Geográficas / Informática e Sociedade'
+    },
+    'Meio ambiente, biodiversidade e sustentabilidade / Ecologia': {
+        'status': 'Transversal / Optativa',
+        'disciplina': 'Informática e Sociedade'
+    },
+    'Globalização, processos migratórios e política internacional': {
+        'status': 'Obrigatória / Optativa',
+        'disciplina': 'Economia / Informática e Sociedade / Transformação Digital'
+    },
+    'Sociodiversidade, multiculturalismo, acessibilidade e inclusão': {
+        'status': 'Obrigatória / Optativa',
+        'disciplina': 'Direito e Cidadania / Libras - Língua Brasileira de Sinais / Interface Humano-Computador'
+    },
+        'Promoção da saúde, prevenção de doenças e segurança alimentar': {
+        'status': 'Ausente',
+        'disciplina': 'Atualmente não há disciplina no currículo da UFCG.'
     }
 }
 
@@ -521,6 +569,109 @@ def gerar_comparativo_assuntos(ranking_dados):
     comparativo.sort(key=lambda x: -x['Media_Historica_Geral_%'])
     return comparativo
 
+def _num(valor, padrao=None):
+    """Converte texto do CSV para float; devolve padrao se vazio ou inválido."""
+    try:
+        return float(str(valor).replace(',', '.'))
+    except (ValueError, TypeError):
+        return padrao
+
+
+def _ordem_questao(r):
+    prefixo, _, num = r['Questao'].partition('_')
+    digitos = ''.join(c for c in num if c.isdigit())
+    return (r['Ano'], 0 if prefixo == 'FG' else 1, int(digitos) if digitos else 0)
+
+
+def gerar_tabela_analise_geral_validas(ranking_dados, dados_opcoes, anos=('2014', '2017', '2021')):
+    """
+    Gera a tabela de análise geral das questões válidas dos anos informados (padrão: 2014, 2017 e 2021),
+    combinando distribuição de opções, mapeamento curricular e diagnóstico de anulação.
+    """
+    opcoes_map = {(r['Ano'], r['Questao']): r for r in dados_opcoes}
+    analise = []
+
+    itens = sorted((r for r in ranking_dados if r['Ano'] in anos and r['Status'] == 'Válida'), key=_ordem_questao)
+
+    for r in itens:
+        ano = r['Ano']
+        q = r['Questao']
+        comp = r['Componente']
+        obj = r.get('Objetivo_de_Conhecimento', 'Não informado')
+        status = r['Status']
+        valida = (status == 'Válida')
+
+        op = opcoes_map.get((ano, q), {})
+        gab = op.get(
+            'Gabarito_Oficial',
+            r['Gabarito_Oficial']
+        )  # gabarito efetivo, se disponível
+
+        taxa_acerto = _num(r.get('Taxa_Acerto_%'))
+        taxa_erro = _num(r.get('Taxa_Erro_%'))
+
+        p_dist = op.get('Principal_Distrator', '-')
+        p_dist_pct = op.get('Pct_Principal_Distrator', 0)
+
+        # Mapeamento curricular
+        info_curr = MAPEAMENTO_CURRICULO_UFCG.get(
+            obj,
+            {
+                'status': (
+                    'Formação Geral / Transversal'
+                    if 'Geral' in comp
+                    else 'Não aplicável ao curso'
+                    if status == 'Não aplicável ao curso'
+                    else 'Não mapeado'
+                ),
+                'disciplina': (
+                    'Tema de Formação Geral (MEC/INEP)'
+                    if 'Geral' in comp
+                    else 'Outra Ênfase (SI/Licenciatura)'
+                    if status == 'Não aplicável ao curso'
+                    else 'Eletiva / Não mapeada'
+                ),
+            },
+        )
+
+        if not valida or taxa_acerto is None:
+            nivel = 'Não se aplica (questão invalidada)'
+        elif taxa_acerto < 40.0:
+            nivel = 'Difícil (<40%)'
+        elif taxa_acerto < 65.0:
+            nivel = 'Média (40-65%)'
+        else:
+            nivel = 'Fácil (>=65%)'
+
+        analise.append({
+                'Ano': ano,
+                'Questao': q,
+                'Componente': comp,
+                'Objetivo_de_Conhecimento': obj,
+                'Gabarito': gab,
+                'Status': status,
+                'Total_Alunos': op.get('Total_Alunos', '-'),
+                'Taxa_Acerto_%': f"{taxa_acerto:.2f}" if taxa_acerto is not None else '-',
+                'Taxa_Erro_%': f"{taxa_erro:.2f}" if taxa_erro is not None else '-',
+                'Nivel_Dificuldade': nivel,
+                'Pct_A': op.get('Pct_A', '-'),
+                'Pct_B': op.get('Pct_B', '-'),
+                'Pct_C': op.get('Pct_C', '-'),
+                'Pct_D': op.get('Pct_D', '-'),
+                'Pct_E': op.get('Pct_E', '-'),
+                'Pct_Branco_Rasura': op.get('Pct_Branco_Rasura', '-'),
+                'Opcao_Mais_Marcada': op.get('Opcao_Mais_Marcada', '-'),
+                'Pct_Opcao_Mais_Marcada': op.get('Pct_Opcao_Mais_Marcada', '-'),
+                'A_Maioria_Marcou_Gabarito': op.get('A_Maioria_Marcou_Gabarito', '-'),
+                'Principal_Distrator': p_dist,
+                'Pct_Principal_Distrator': p_dist_pct,
+                'Efeito_Distrator': op.get('Efeito_Distrator', '-'),
+                'Presenca_na_Ementa_UFCG': info_curr['status'],
+                'Disciplina_Correspondente_UFCG': info_curr['disciplina'],
+            })
+
+    return analise
+
 def salvar_csv(dados, caminho):
     os.makedirs(os.path.dirname(caminho), exist_ok=True)
     if not dados:
@@ -548,5 +699,8 @@ if __name__ == '__main__':
     
     tabela_comparativo = gerar_comparativo_assuntos(ranking)
     salvar_csv(tabela_comparativo, ARQUIVO_COMPARATIVO_ASSUNTOS)
+
+    tabela_geral = gerar_tabela_analise_geral_validas(ranking, tabela_opcoes)
+    salvar_csv(tabela_geral, ARQUIVO_ANALISE_GERAL)
     
     print("\nProcessamento concluído com sucesso!")

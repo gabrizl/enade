@@ -2,11 +2,11 @@
 2014;1;Formação Geral;Tecnologias de Informação e Comunicação;1;FG_04;94.64;5.36
 2014;5;Formação Geral;Vida urbana e rural;1;FG_08;85.71;14.29
 2014;6;Formação Geral;Ecologia;1;FG_03;83.93;16.07
-2014;7;Formação Geral;Políticas públicas (educação, habitação, saneamento, saúde, transporte, segurança, defesa e desenvolvimento sustentável);1;FG_07;80.36;19.64
+2014;7;Formação Geral;Políticas públicas (educação habitação saneamento saúde transporte segurança defesa e desenvolvimento sustentável);1;FG_07;80.36;19.64
 2014;8;Formação Geral;"Sociodiversidade e multiculturalismo (violência, tolerância/intolerância, inclusão/exclusão e relações de gênero);";1;FG_06;75.00;25.00
-2014;13;Formação Geral;Cultura e arte;1;FG_01;57.14;42.86
-2014;14;Formação Geral;Responsabilidade social;1;FG_02;53.57;46.43
-2014;17;Formação Geral;Avanços tecnológicos;1;FG_05;33.93;66.07
+2014;12;Formação Geral;Cultura e arte;1;FG_01;57.14;42.86
+2014;13;Formação Geral;Responsabilidade social (setor público privado e terceiro setor);1;FG_02;53.57;46.43
+2014;16;Formação Geral;Avanços tecnológicos;1;FG_05;33.93;66.07
 2017;1;Formação Geral;Processos migratórios;1;FG_06;94.03;5.97
 2017;2;Formação Geral;Tecnologias de Informação e Comunicação;1;FG_04;77.61;22.39
 2017;7;Formação Geral;Inovação tecnológica;1;FG_05;68.66;31.34
@@ -15,10 +15,10 @@
 2017;16;Formação Geral;Meio ambiente;1;FG_03;44.78;55.22
 2017;19;Formação Geral;Globalização e política internacional;1;FG_01;41.79;58.21
 2017;22;Formação Geral;Cultura e arte;1;FG_07;28.36;71.64
-2021;1;Formação Geral;Cidades, habitação e qualidade de vida;1;FG_03;70.21;29.79
+2021;1;Formação Geral;Cidades habitação e qualidade de vida;1;FG_03;70.21;29.79
 2021;4;Formação Geral;Globalização e política internacional;1;FG_06;69.15;30.85
-2021;5;Formação Geral;Promoção da saúde e prevenção de doenças;2;FG_05, FG_07;65.43;34.57
-2021;7;Formação Geral;Ciência, tecnologia e inovação;1;FG_01;60.64;39.36
-2021;11;Formação Geral;Estado, sociedade e trabalho;1;FG_04;52.13;47.87
+2021;5;Formação Geral;Promoção da saúde e prevenção de doenças;2;FG_05 FG_07;65.43;34.57
+2021;7;Formação Geral;Ciência tecnologia e inovação;1;FG_01;60.64;39.36
+2021;11;Formação Geral;Estado sociedade e trabalho;1;FG_04;52.13;47.87
 2021;17;Formação Geral;Segurança alimentar e nutricional;1;FG_02;30.85;69.15
-2021;19;Formação Geral;Ética, democracia e cidadania;1;FG_08;24.47;75.53
+2021;19;Formação Geral;democracia e cidadania;1;FG_08;24.47;75.53
